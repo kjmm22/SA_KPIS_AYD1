@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ADS1 {
+namespace Aplicacion {
     
     
-    public partial class master_admin_g8 {
+    public partial class admin_master_g81 {
         
         /// <summary>
         /// Control head.

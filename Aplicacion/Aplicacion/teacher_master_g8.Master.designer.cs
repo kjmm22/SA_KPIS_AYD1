@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ADS1 {
+namespace Aplicacion {
     
     
     public partial class master_teacher_g8 {

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="teacher_master_g8.Master.cs" Inherits="ADS1.master_teacher_g8" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="teacher_master_g8.Master.cs" Inherits="Aplicacion.master_teacher_g8" %>
 
 <!DOCTYPE html>
 
@@ -15,10 +15,10 @@
             <div class="headerContainer">
             <div class="nav">
                 <ul>
-                    <li><strong><asp:LinkButton ID="lbuPageMain" runat="server" OnClick="lbuPageMain_Click">Página Principal</asp:LinkButton></strong></li>
+                    <li><strong><asp:LinkButton ID="lbuPageMain" runat="server">Página Principal</asp:LinkButton></strong></li>
                     <li><strong><asp:LinkButton ID="lbuCourses" runat="server">Cursos y Secciones</asp:LinkButton></strong></li>
                     <li><strong><asp:LinkButton ID="lbuStudents" runat="server">Estudiantes</asp:LinkButton></strong></li>
-                    <li><strong><asp:LinkButton ID="lbuLogOut" runat="server" OnClick="lbuLogOut_Click">Cerrar Sesión</asp:LinkButton></strong></li>
+                    <li><strong><asp:LinkButton ID="lbuLogOut" runat="server">Cerrar Sesión</asp:LinkButton></strong></li>
                 </ul>
             </div>
         </div>

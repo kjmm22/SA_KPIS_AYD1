@@ -114,7 +114,6 @@
     <Content Include="coordinator_css_g8.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Inicio.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -124,10 +123,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="admin_master_g8.Master" />
+    <Content Include="inicio_g8.aspx" />
     <Content Include="main_css_g8.css" />
-    <Content Include="main_master_g8.Master" />
     <Content Include="coordinator_master_g8.Master" />
+    <Content Include="admin_master_g8.Master" />
+    <Content Include="main_master_g8.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -179,15 +179,15 @@
     <Compile Include="coordinator_master_g8.Master.designer.cs">
       <DependentUpon>coordinator_master_g8.Master</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.aspx.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Inicio.aspx.designer.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="inicio_g8.aspx.cs">
+      <DependentUpon>inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inicio_g8.aspx.designer.cs">
+      <DependentUpon>inicio_g8.aspx</DependentUpon>
     </Compile>
     <Compile Include="main_master_g8.Master.cs">
       <DependentUpon>main_master_g8.Master</DependentUpon>
