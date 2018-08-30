@@ -10,7 +10,7 @@
 namespace Aplicacion {
     
     
-    public partial class master_main_g8 {
+    public partial class main_master_g81 {
         
         /// <summary>
         /// Control head.

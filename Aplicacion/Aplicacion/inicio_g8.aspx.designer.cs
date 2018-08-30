@@ -10,6 +10,6 @@
 namespace Aplicacion {
     
     
-    public partial class Formulario_web1 {
+    public partial class inicio_g8 {
     }
 }
