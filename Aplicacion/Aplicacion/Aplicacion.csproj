@@ -108,6 +108,7 @@
     <Content Include="admin_css_g8.css" />
     <Content Include="Content\Site.css" />
     <Content Include="coordinator_css_g8.css" />
+    <Content Include="CRUDGrados_g8.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="inicio_g8.aspx" />
@@ -209,6 +210,13 @@
     </Compile>
     <Compile Include="coordinator_master_g8.Master.designer.cs">
       <DependentUpon>coordinator_master_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDGrados_g8.aspx.cs">
+      <DependentUpon>CRUDGrados_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDGrados_g8.aspx.designer.cs">
+      <DependentUpon>CRUDGrados_g8.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
