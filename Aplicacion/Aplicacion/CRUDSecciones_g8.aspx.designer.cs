@@ -10,7 +10,7 @@
 namespace Aplicacion {
     
     
-    public partial class CRUDGrados_g8 {
+    public partial class CRUDSecciones_g8 {
         
         /// <summary>
         /// GridView1 control.
@@ -22,13 +22,13 @@ namespace Aplicacion {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// MostrarTablaGrados control.
+        /// FuenteSecciones control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource MostrarTablaGrados;
+        protected global::System.Web.UI.WebControls.SqlDataSource FuenteSecciones;
         
         /// <summary>
         /// Label1 control.
@@ -40,22 +40,23 @@ namespace Aplicacion {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// TextBoxNombreGrado control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxNombreGrado;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// BotonCrearGrado control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BotonCrearGrado;      
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
         /// <summary>
         /// DropDownList1 control.
         /// </summary>
@@ -75,13 +76,31 @@ namespace Aplicacion {
         protected global::System.Web.UI.WebControls.SqlDataSource Grados;
         
         /// <summary>
-        /// BotonEliminar control.
+        /// GridView2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BotonEliminar;
+        protected global::System.Web.UI.WebControls.GridView GridView2;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
         /// DropDownList2 control.
@@ -93,39 +112,39 @@ namespace Aplicacion {
         protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
         
         /// <summary>
-        /// ModificaGrados control.
+        /// Ciclos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource ModificaGrados;
+        protected global::System.Web.UI.WebControls.SqlDataSource Ciclos;
         
         /// <summary>
-        /// Label2 control.
+        /// GridView3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.GridView GridView3;
         
         /// <summary>
-        /// TextBoxModificar control.
+        /// SqlDataSource2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxModificar;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
-        /// BotonModificar control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BotonModificar;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

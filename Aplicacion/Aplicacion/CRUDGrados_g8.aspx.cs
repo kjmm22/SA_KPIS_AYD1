@@ -12,6 +12,7 @@ namespace Aplicacion
 {
     public partial class CRUDGrados_g8 : System.Web.UI.Page
     {
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerConnectionString"].ToString());
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -35,6 +36,32 @@ namespace Aplicacion
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteScalar();
             con.Close();
+            Response.Redirect(Request.RawUrl);    
+        }
+
+        protected void BotonEliminar_Click(object sender, EventArgs e)
+        {
+            string id;
+            id = DropDownList1.SelectedValue;
+            con.Open();
+            string consulta = "delete from grado where nombre='"+id+"';";
+            SqlCommand cmd = new SqlCommand(consulta, con);
+            cmd.ExecuteScalar();
+            con.Close();
+            Response.Redirect(Request.RawUrl);
+        }
+
+        protected void BotonModificar_Click(object sender, EventArgs e)
+        {
+            string nombreviejo, nombrenuevo;
+            nombreviejo = DropDownList2.SelectedValue;
+            nombrenuevo = TextBoxModificar.Text;
+            con.Open();
+            string consulta = "UPDATE grado SET nombre = '"+nombrenuevo+"' WHERE nombre = '"+nombreviejo+"';";
+            SqlCommand cmd = new SqlCommand(consulta, con);
+            cmd.ExecuteScalar();
+            con.Close();
+            Response.Redirect(Request.RawUrl);
         }
     }
 }
