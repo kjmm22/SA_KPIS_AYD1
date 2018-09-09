@@ -9,6 +9,10 @@ namespace Aplicacion.Tests
         [TestMethod]
         public void TestMethod1()
         {
+            CRUDPlanificacion_g8 test1 = new CRUDPlanificacion_g8();
+            test1.Prueba();
+            Assert.AreEqual(test1.te, "dos");
         }
+
     }
 }

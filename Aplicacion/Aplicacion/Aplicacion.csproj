@@ -112,6 +112,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="coordinator_css_g8.css" />
+    <Content Include="CRUDPlanificacionDirector_g8.aspx" />
+    <Content Include="CRUDPlanificacionMaestro_g8.aspx" />
     <Content Include="CRUDCiclos_g8.aspx" />
     <Content Include="CRUDGrados_g8.aspx" />
     <Content Include="CRUDSecciones_g8.aspx" />
@@ -182,6 +184,19 @@
     <Compile Include="coordinator_master_g8.Master.designer.cs">
       <DependentUpon>coordinator_master_g8.Master</DependentUpon>
     </Compile>
+    <Compile Include="CRUDPlanificacionDirector_g8.aspx.cs">
+      <DependentUpon>CRUDPlanificacionDirector_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDPlanificacionDirector_g8.aspx.designer.cs">
+      <DependentUpon>CRUDPlanificacionDirector_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDPlanificacionMaestro_g8.aspx.cs">
+      <DependentUpon>CRUDPlanificacionMaestro_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDPlanificacionMaestro_g8.aspx.designer.cs">
+      <DependentUpon>CRUDPlanificacionMaestro_g8.aspx</DependentUpon>
     <Compile Include="CRUDCiclos_g8.aspx.cs">
       <DependentUpon>CRUDCiclos_g8.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
