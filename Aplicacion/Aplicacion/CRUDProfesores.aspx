@@ -37,7 +37,7 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString2 %>" DeleteCommand="DELETE FROM [profesor] WHERE [profesor] = @profesor" InsertCommand="INSERT INTO [profesor] ([nombre], [codigo], [calificacion], [tipo]) VALUES (@nombre, @codigo, @calificacion, @tipo)" SelectCommand="SELECT * FROM [profesor]" UpdateCommand="UPDATE [profesor] SET [nombre] = @nombre, [codigo] = @codigo, [calificacion] = @calificacion, [tipo] = @tipo WHERE [profesor] = @profesor">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" DeleteCommand="DELETE FROM [profesor] WHERE [profesor] = @profesor" InsertCommand="INSERT INTO [profesor] ([nombre], [codigo], [calificacion], [tipo]) VALUES (@nombre, @codigo, @calificacion, @tipo)" SelectCommand="SELECT * FROM [profesor]" UpdateCommand="UPDATE [profesor] SET [nombre] = @nombre, [codigo] = @codigo, [calificacion] = @calificacion, [tipo] = @tipo WHERE [profesor] = @profesor">
         <DeleteParameters>
             <asp:Parameter Name="profesor" Type="Int32" />
         </DeleteParameters>
@@ -55,7 +55,7 @@
             <asp:Parameter Name="profesor" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:insertar %>" DeleteCommand="DELETE FROM [profesor] WHERE [profesor] = @profesor" InsertCommand="INSERT INTO [profesor] ([nombre], [codigo], [calificacion], [tipo]) VALUES (@nombre, @codigo, @calificacion, @tipo)" SelectCommand="SELECT * FROM [profesor]" UpdateCommand="UPDATE [profesor] SET [nombre] = @nombre, [codigo] = @codigo, [calificacion] = @calificacion, [tipo] = @tipo WHERE [profesor] = @profesor">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" DeleteCommand="DELETE FROM [profesor] WHERE [profesor] = @profesor" InsertCommand="INSERT INTO [profesor] ([nombre], [codigo], [calificacion], [tipo]) VALUES (@nombre, @codigo, @calificacion, @tipo)" SelectCommand="SELECT * FROM [profesor]" UpdateCommand="UPDATE [profesor] SET [nombre] = @nombre, [codigo] = @codigo, [calificacion] = @calificacion, [tipo] = @tipo WHERE [profesor] = @profesor">
         <DeleteParameters>
             <asp:Parameter Name="profesor" Type="Int32" />
         </DeleteParameters>

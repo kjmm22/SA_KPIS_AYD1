@@ -14,6 +14,7 @@ namespace Aplicacion
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlDataSource1.Insert();
+            GridView1.DataBind();
         }
 
 

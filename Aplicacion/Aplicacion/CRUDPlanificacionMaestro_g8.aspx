@@ -48,7 +48,7 @@ INNER JOIN grado as g ON se.grado=g.grado WHERE (ap.profesor = @profesor) AND a.
     <br />
     Actividades rechazados<br />
     <br />
-<asp:ListView ID="ListView2" runat="server" DataSourceID="SqlDataSource2" style="text-align: left">
+<asp:ListView ID="ListView2" runat="server" DataSourceID="SqlDataSource2" style="text-align: left" OnSelectedIndexChanged="ListView2_SelectedIndexChanged">
     <AlternatingItemTemplate>
         <tr style="background-color:#FFF8DC;">
             <td>
