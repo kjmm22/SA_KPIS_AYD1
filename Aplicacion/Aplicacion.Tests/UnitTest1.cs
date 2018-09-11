@@ -13,6 +13,5 @@ namespace Aplicacion.Tests
             test1.Prueba();
             Assert.AreEqual(test1.te, "dos");
         }
-
     }
 }
