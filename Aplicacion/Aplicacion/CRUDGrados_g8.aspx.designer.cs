@@ -55,7 +55,7 @@ namespace Aplicacion {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BotonCrearGrado;      
+        protected global::System.Web.UI.WebControls.Button BotonCrearGrado;
         /// <summary>
         /// DropDownList1 control.
         /// </summary>

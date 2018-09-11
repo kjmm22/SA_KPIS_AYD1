@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------
 
 namespace Aplicacion {
-    
     public partial class master_teacher_g8 {
         
         /// <summary>

@@ -168,7 +168,6 @@
     <Content Include="Content\vendor\owl.carousel\assets\owl.video.play.png" />
     <Content Include="Content\vendor\owl.carousel\owl.carousel.js" />
     <Content Include="Content\vendor\owl.carousel\owl.carousel.min.js" />
-    <Content Include="CRUDGrados_g8.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="coordinator_css_g8.css" />
     <Content Include="CRUDPlanificacionDirector_g8.aspx" />
@@ -187,6 +186,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="CRUDProfesores.aspx" />
     <Content Include="inicio_g8.aspx" />
     <Content Include="coordinator_master_g8.Master" />
     <Content Include="admin_master_g8.Master" />
@@ -297,6 +297,12 @@
     <Compile Include="CRUDGrados_g8.aspx.designer.cs">
       <DependentUpon>CRUDGrados_g8.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CRUDProfesores.aspx.cs">
+      <DependentUpon>CRUDProfesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDProfesores.aspx.designer.cs">
+      <DependentUpon>CRUDProfesores.aspx</DependentUpon>
     <Compile Include="CRUDSecciones_g8.aspx.cs">
       <DependentUpon>CRUDSecciones_g8.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
