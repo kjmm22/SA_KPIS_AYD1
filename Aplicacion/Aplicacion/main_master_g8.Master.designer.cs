@@ -13,7 +13,6 @@ namespace Aplicacion {
     public partial class main_master_g81 {
         
         /// <summary>
-        /// Control lbuPageMain.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
@@ -23,6 +22,10 @@ namespace Aplicacion {
         
         /// <summary>
         /// Control lbuAbout.
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        
+        /// <summary>
+        /// Control form1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
