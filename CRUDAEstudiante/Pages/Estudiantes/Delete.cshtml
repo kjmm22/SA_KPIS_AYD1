@@ -1,0 +1,46 @@
+@page
+@model CRUDAEstudiante.Pages.Estudiantes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Estudiante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiante.Carne)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estudiante.Carne)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiante.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estudiante.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiante.Apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estudiante.Apellido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiante.Direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estudiante.Direccion)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Estudiante.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Regresar a CRUDAEstudiantes</a>
+    </form>
+</div>

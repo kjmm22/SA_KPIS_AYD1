@@ -1,0 +1,43 @@
+@page
+@model CRUDAEstudiante.Pages.Estudiantes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Estudiante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiante.Carne)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estudiante.Carne)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiante.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estudiante.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiante.Apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estudiante.Apellido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiante.Direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estudiante.Direccion)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Estudiante.ID">Edit</a> |
+    <a asp-page="./Index">Regresar a CRUDAEstudiantes</a>
+</div>
