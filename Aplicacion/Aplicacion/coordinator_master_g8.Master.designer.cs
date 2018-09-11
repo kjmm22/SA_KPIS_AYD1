@@ -1,4 +1,4 @@
-﻿//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // <generado automáticamente>
 //     Este código fue generado por una herramienta.
 //
@@ -11,7 +11,7 @@ namespace Aplicacion {
     
     
     public partial class master_coordinator_g8 {
-        
+       
         /// <summary>
         /// Control head.
         /// </summary>
@@ -81,6 +81,15 @@ namespace Aplicacion {
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+      
+        /// theme_stylesheet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink theme_stylesheet;
+        
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
     }

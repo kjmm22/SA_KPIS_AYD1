@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -110,9 +110,71 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\landy-iconfont.css" />
+    <Content Include="Content\css\style.blue.css" />
+    <Content Include="Content\css\style.default.css" />
+    <Content Include="Content\css\style.green.css" />
+    <Content Include="Content\css\style.pink.css" />
+    <Content Include="Content\css\style.red.css" />
+    <Content Include="Content\css\style.sea.css" />
+    <Content Include="Content\css\style.violet.css" />
+    <Content Include="Content\fonts\landy.svg" />
+    <Content Include="Content\icons-reference\fonts\landy.svg" />
+    <Content Include="Content\icons-reference\icons-reference.html" />
+    <Content Include="Content\icons-reference\styles.css" />
+    <Content Include="Content\img\avatar-3.jpg" />
+    <Content Include="Content\img\avatar-5.jpg" />
+    <Content Include="Content\img\cup.svg" />
+    <Content Include="Content\img\feature-1.png" />
+    <Content Include="Content\img\feature-2.png" />
+    <Content Include="Content\img\feature-3.png" />
+    <Content Include="Content\img\hourglass.svg" />
+    <Content Include="Content\img\Macbook.png" />
+    <Content Include="Content\img\medal.svg" />
+    <Content Include="Content\img\preview-1.png" />
+    <Content Include="Content\img\preview-2.png" />
+    <Content Include="Content\img\preview-3.png" />
+    <Content Include="Content\img\quote.svg" />
+    <Content Include="Content\img\template-mac.png" />
+    <Content Include="Content\js\front.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\vendor\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Content\vendor\jquery.cookie\jquery.cookie.js" />
+    <Content Include="Content\vendor\jquery.cookie\MIT-LICENSE.txt" />
+    <Content Include="Content\vendor\jquery\core.js" />
+    <Content Include="Content\vendor\jquery\jquery.js" />
+    <Content Include="Content\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\vendor\jquery\jquery.slim.js" />
+    <Content Include="Content\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Content\vendor\owl.carousel\assets\ajax-loader.gif" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.carousel.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.carousel.min.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.default.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.default.min.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.green.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.green.min.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.video.play.png" />
+    <Content Include="Content\vendor\owl.carousel\owl.carousel.js" />
+    <Content Include="Content\vendor\owl.carousel\owl.carousel.min.js" />
     <Content Include="Content\Site.css" />
     <Content Include="coordinator_css_g8.css" />
+    <Content Include="CRUDPlanificacionDirector_g8.aspx" />
+    <Content Include="CRUDPlanificacionMaestro_g8.aspx" />
+    <Content Include="CRUDCiclos_g8.aspx" />
     <Content Include="CRUDGrados_g8.aspx" />
+    <Content Include="CRUDSecciones_g8.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -124,7 +186,35 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="CRUDProfesores.aspx" />
     <Content Include="inicio_g8.aspx" />
+    <Content Include="coordinator_master_g8.Master" />
+    <Content Include="admin_master_g8.Master" />
+    <Content Include="main_master_g8.Master" />
+    <Content Include="Content\fonts\landy.eot" />
+    <Content Include="Content\fonts\landy.ttf" />
+    <Content Include="Content\fonts\landy.woff" />
+    <Content Include="Content\icons-reference\fonts\landy.eot" />
+    <Content Include="Content\icons-reference\fonts\landy.ttf" />
+    <Content Include="Content\icons-reference\fonts\landy.woff" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\vendor\jquery.cookie\component.json" />
+    <Content Include="Content\vendor\jquery.cookie\cookie.jquery.json" />
+    <Content Include="Content\vendor\owl.carousel\LICENSE" />
+    <Content Include="ma_principal_g8.Master" />
+    <Content Include="ma_maestro_g8.Master" />
+    <Content Include="ma_cooordinador_g8.Master" />
+    <Content Include="ma_admin_g8.Master" />
+    <Content Include="WebForm1.aspx" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="pg_admin_inicio_g8.aspx" />
+    <Content Include="pg_coordinador_inicio_g8.aspx" />
+    <Content Include="pg_maestro_inicio_g8.aspx" />
+    <Content Include="pg_principal_inicio_g8.aspx" />
     <Content Include="main_css_g8.css" />
     <Content Include="coordinator_master_g8.Master" />
     <Content Include="admin_master_g8.Master" />
@@ -180,12 +270,45 @@
     <Compile Include="coordinator_master_g8.Master.designer.cs">
       <DependentUpon>coordinator_master_g8.Master</DependentUpon>
     </Compile>
+    <Compile Include="CRUDPlanificacionDirector_g8.aspx.cs">
+      <DependentUpon>CRUDPlanificacionDirector_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDPlanificacionDirector_g8.aspx.designer.cs">
+      <DependentUpon>CRUDPlanificacionDirector_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDPlanificacionMaestro_g8.aspx.cs">
+      <DependentUpon>CRUDPlanificacionMaestro_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDPlanificacionMaestro_g8.aspx.designer.cs">
+      <DependentUpon>CRUDPlanificacionMaestro_g8.aspx</DependentUpon>
+    <Compile Include="CRUDCiclos_g8.aspx.cs">
+      <DependentUpon>CRUDCiclos_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDCiclos_g8.aspx.designer.cs">
+      <DependentUpon>CRUDCiclos_g8.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CRUDGrados_g8.aspx.cs">
       <DependentUpon>CRUDGrados_g8.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CRUDGrados_g8.aspx.designer.cs">
       <DependentUpon>CRUDGrados_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDProfesores.aspx.cs">
+      <DependentUpon>CRUDProfesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDProfesores.aspx.designer.cs">
+      <DependentUpon>CRUDProfesores.aspx</DependentUpon>
+    <Compile Include="CRUDSecciones_g8.aspx.cs">
+      <DependentUpon>CRUDSecciones_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDSecciones_g8.aspx.designer.cs">
+      <DependentUpon>CRUDSecciones_g8.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,6 +327,62 @@
     <Compile Include="main_master_g8.Master.designer.cs">
       <DependentUpon>main_master_g8.Master</DependentUpon>
     </Compile>
+    <Compile Include="ma_admin_g8.Master.cs">
+      <DependentUpon>ma_admin_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ma_admin_g8.Master.designer.cs">
+      <DependentUpon>ma_admin_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ma_cooordinador_g8.Master.cs">
+      <DependentUpon>ma_cooordinador_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ma_cooordinador_g8.Master.designer.cs">
+      <DependentUpon>ma_cooordinador_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ma_maestro_g8.Master.cs">
+      <DependentUpon>ma_maestro_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ma_maestro_g8.Master.designer.cs">
+      <DependentUpon>ma_maestro_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ma_principal_g8.Master.cs">
+      <DependentUpon>ma_principal_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ma_principal_g8.Master.designer.cs">
+      <DependentUpon>ma_principal_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pg_admin_inicio_g8.aspx.cs">
+      <DependentUpon>pg_admin_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_admin_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_admin_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_coordinador_inicio_g8.aspx.cs">
+      <DependentUpon>pg_coordinador_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_coordinador_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_coordinador_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_maestro_inicio_g8.aspx.cs">
+      <DependentUpon>pg_maestro_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_maestro_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_maestro_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_principal_inicio_g8.aspx.cs">
+      <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_principal_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="teacher_master_g8.Master.cs">
       <DependentUpon>teacher_master_g8.Master</DependentUpon>
@@ -212,9 +391,19 @@
     <Compile Include="teacher_master_g8.Master.designer.cs">
       <DependentUpon>teacher_master_g8.Master</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\vendor\font-awesome\less\" />
+    <Folder Include="Content\vendor\font-awesome\scss\" />
+    <Folder Include="Content\vendor\jquery.cookie\test\" />
     <Folder Include="img\" />
   </ItemGroup>
   <ItemGroup>

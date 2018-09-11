@@ -22,6 +22,7 @@ namespace Aplicacion
         {
             string nom;
             nom = TextBoxNombreGrado.Text;
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerConnectionString"].ToString());
             con.Open();
             string consulta = "INSERT INTO grado values('" + nom + "');";
             SqlCommand cmd = new SqlCommand(consulta, con);
