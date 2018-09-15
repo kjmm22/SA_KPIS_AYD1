@@ -13,7 +13,7 @@
                 <asp:BoundField DataField="ciclo_padre" HeaderText="ciclo_padre" SortExpression="ciclo_padre" />
             </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="DataCiclos" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT * FROM [ciclo]" DeleteCommand="DELETE FROM [ciclo] WHERE [ciclo] = @original_ciclo" InsertCommand="INSERT INTO [ciclo] ([nombre], [fecha_inicio], [fecha_fin], [ciclo_padre]) VALUES (@nombre, @fecha_inicio, @fecha_fin, @ciclo_padre)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [ciclo] SET [nombre] = @nombre, [fecha_inicio] = @fecha_inicio, [fecha_fin] = @fecha_fin, [ciclo_padre] = @ciclo_padre WHERE [ciclo] = @original_ciclo">
+    <asp:SqlDataSource ID="DataCiclos" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT * FROM [ciclo]" DeleteCommand="DELETE FROM [ciclo] WHERE [ciclo] = @original_ciclo" InsertCommand="INSERT INTO [ciclo] ([nombre], [fecha_inicio], [fecha_fin], [ciclo_padre]) VALUES (@nombre, @fecha_inicio, @fecha_fin, @ciclo_padre)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [ciclo] SET [nombre] = @nombre, [fecha_inicio] = @fecha_inicio, [fecha_fin] = @fecha_fin, [ciclo_padre] = @ciclo_padre WHERE [ciclo] = @original_ciclo">
         <DeleteParameters>
             <asp:Parameter Name="original_ciclo" Type="Int32" />
         </DeleteParameters>
@@ -68,7 +68,7 @@
     <asp:Label ID="Label3" runat="server" Text="Ciclo:"></asp:Label>
    
         <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="DataCiclos2" DataTextField="ciclo" DataValueField="ciclo" style="position: relative; top: 5px; left: 152px"></asp:DropDownList>
-        <asp:SqlDataSource ID="DataCiclos2" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT DISTINCT * FROM [ciclo]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="DataCiclos2" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT DISTINCT * FROM [ciclo]"></asp:SqlDataSource>
     </p>
     <p>
         <asp:Button ID="Button1" runat="server" Text="Agregar Ciclo" OnClick="Button1_Click" />

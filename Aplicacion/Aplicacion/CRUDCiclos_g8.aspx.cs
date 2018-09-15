@@ -15,7 +15,7 @@ namespace Aplicacion
         string añofin,mesfin,diafin;
         string nombreciclo;
         string ciclopadre;
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerConnectionString"].ToString());
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerCS"].ToString());
 
         protected void Page_Load(object sender, EventArgs e)
         {
