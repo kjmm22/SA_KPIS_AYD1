@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -105,7 +105,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin_css_g8.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -169,7 +168,6 @@
     <Content Include="Content\vendor\owl.carousel\owl.carousel.js" />
     <Content Include="Content\vendor\owl.carousel\owl.carousel.min.js" />
     <Content Include="Content\Site.css" />
-    <Content Include="coordinator_css_g8.css" />
     <Content Include="CRUDPlanificacionDirector_g8.aspx" />
     <Content Include="CRUDPlanificacionMaestro_g8.aspx" />
     <Content Include="CRUDCiclos_g8.aspx" />
@@ -187,10 +185,6 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="CRUDProfesores.aspx" />
-    <Content Include="inicio_g8.aspx" />
-    <Content Include="coordinator_master_g8.Master" />
-    <Content Include="admin_master_g8.Master" />
-    <Content Include="main_master_g8.Master" />
     <Content Include="Content\fonts\landy.eot" />
     <Content Include="Content\fonts\landy.ttf" />
     <Content Include="Content\fonts\landy.woff" />
@@ -209,16 +203,11 @@
     <Content Include="ma_maestro_g8.Master" />
     <Content Include="ma_cooordinador_g8.Master" />
     <Content Include="ma_admin_g8.Master" />
-    <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="pg_admin_inicio_g8.aspx" />
     <Content Include="pg_coordinador_inicio_g8.aspx" />
     <Content Include="pg_maestro_inicio_g8.aspx" />
     <Content Include="pg_principal_inicio_g8.aspx" />
-    <Content Include="main_css_g8.css" />
-    <Content Include="coordinator_master_g8.Master" />
-    <Content Include="admin_master_g8.Master" />
-    <Content Include="main_master_g8.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -248,28 +237,12 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="teacher_css_g8.css" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
-    <Content Include="teacher_master_g8.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin_master_g8.Master.cs">
-      <DependentUpon>admin_master_g8.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin_master_g8.Master.designer.cs">
-      <DependentUpon>admin_master_g8.Master</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="coordinator_master_g8.Master.cs">
-      <DependentUpon>coordinator_master_g8.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="coordinator_master_g8.Master.designer.cs">
-      <DependentUpon>coordinator_master_g8.Master</DependentUpon>
-    </Compile>
     <Compile Include="CRUDPlanificacionDirector_g8.aspx.cs">
       <DependentUpon>CRUDPlanificacionDirector_g8.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -314,20 +287,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="inicio_g8.aspx.cs">
-      <DependentUpon>inicio_g8.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="inicio_g8.aspx.designer.cs">
-      <DependentUpon>inicio_g8.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="main_master_g8.Master.cs">
-      <DependentUpon>main_master_g8.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="main_master_g8.Master.designer.cs">
-      <DependentUpon>main_master_g8.Master</DependentUpon>
     </Compile>
     <Compile Include="ma_admin_g8.Master.cs">
       <DependentUpon>ma_admin_g8.Master</DependentUpon>
@@ -386,20 +345,6 @@
       <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="teacher_master_g8.Master.cs">
-      <DependentUpon>teacher_master_g8.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="teacher_master_g8.Master.designer.cs">
-      <DependentUpon>teacher_master_g8.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
