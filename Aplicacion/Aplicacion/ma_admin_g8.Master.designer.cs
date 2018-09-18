@@ -31,13 +31,22 @@ namespace Aplicacion {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// signupform control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm signupform;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// hl_logout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hl_logout;
         
         /// <summary>
         /// lb_username control.
@@ -49,13 +58,13 @@ namespace Aplicacion {
         protected global::System.Web.UI.WebControls.Label lb_username;
         
         /// <summary>
-        /// bt_logout control.
+        /// lb_usertype control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_logout;
+        protected global::System.Web.UI.WebControls.Label lb_usertype;
         
         /// <summary>
         /// ContentPlaceHolder1 control.
