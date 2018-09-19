@@ -15,9 +15,31 @@ namespace Aplicacion.Tests
             {
                 Tipo = 3 
             };
-            bool resul = n.validar();
+            bool resul = n.Validar();
             Assert.IsTrue(resul);
+        }
+        
+        [TestMethod]
+        public void Validar_codigo()
+        {
+            Catedratico nuevo = new Catedratico
+            {
+                Codigo = "asdfghjk"
+            };
+            bool resul = nuevo.Validar_codigo();
+            Assert.IsTrue(resul);
+        }
 
+        [TestMethod]
+        public void Validar_calificacion()
+        {
+            Catedratico nuevo = new Catedratico
+            {
+                Calificacion = 82
+
+            };
+            bool resul = nuevo.Validar_calificacion();
+            Assert.IsTrue(resul);
         }
     }
 }
