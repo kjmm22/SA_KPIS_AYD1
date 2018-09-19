@@ -40,6 +40,7 @@ namespace Aplicacion.Tests
             };
             bool resul = nuevo.Validar_calificacion();
             Assert.IsTrue(resul);
+
         }
     }
 }
