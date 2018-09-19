@@ -10,7 +10,7 @@
 namespace Aplicacion {
     
     
-    public partial class inicio_g8 {
+    public partial class SUBIRExamenes_ {
         
         /// <summary>
         /// Control FileUpload1.
@@ -22,6 +22,15 @@ namespace Aplicacion {
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
         
         /// <summary>
+        /// Control Label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
         /// Control ListBox1.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,24 @@ namespace Aplicacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox ListBox1;
+        
+        /// <summary>
+        /// Control Label2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
+        /// Control GB1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button GB1;
         
         /// <summary>
         /// Control SqlDataSource1.
@@ -40,13 +67,22 @@ namespace Aplicacion {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// Control Datos2.
+        /// Control SqlDataSource2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Datos2;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        
+        /// <summary>
+        /// Control SDS3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SDS3;
         
         /// <summary>
         /// Control GridView1.
@@ -56,14 +92,5 @@ namespace Aplicacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-        
-        /// <summary>
-        /// Control SqlDataSource3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
     }
 }

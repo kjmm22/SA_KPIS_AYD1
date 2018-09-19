@@ -187,7 +187,6 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="CRUDProfesores.aspx" />
-    <Content Include="SUBIRExamenes.aspx" />
     <Content Include="inicio_g8.aspx" />
     <Content Include="coordinator_master_g8.Master" />
     <Content Include="admin_master_g8.Master" />
@@ -210,6 +209,7 @@
     <Content Include="ma_maestro_g8.Master" />
     <Content Include="ma_cooordinador_g8.Master" />
     <Content Include="ma_admin_g8.Master" />
+    <Content Include="SUBIRExamenes.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="pg_admin_inicio_g8.aspx" />
@@ -316,13 +316,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="SUBIRExamenes.aspx.cs">
-      <DependentUpon>SUBIRExamenes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SUBIRExamenes.aspx.designer.cs">
-      <DependentUpon>SUBIRExamenes.aspx</DependentUpon>
-    </Compile>
     <Compile Include="inicio_g8.aspx.cs">
       <DependentUpon>inicio_g8.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -394,6 +387,13 @@
       <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SUBIRExamenes.aspx.cs">
+      <DependentUpon>SUBIRExamenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SUBIRExamenes.aspx.designer.cs">
+      <DependentUpon>SUBIRExamenes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="teacher_master_g8.Master.cs">
       <DependentUpon>teacher_master_g8.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
