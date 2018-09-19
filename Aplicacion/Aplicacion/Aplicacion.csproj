@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.4.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -106,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin_css_g8.css" />
+    <Content Include="Calificacion_Catedratico_g8.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -190,6 +195,7 @@
     <Content Include="inicio_g8.aspx" />
     <Content Include="coordinator_master_g8.Master" />
     <Content Include="admin_master_g8.Master" />
+    <Content Include="itextsharp.dll" />
     <Content Include="main_master_g8.Master" />
     <Content Include="Content\fonts\landy.eot" />
     <Content Include="Content\fonts\landy.ttf" />
@@ -209,6 +215,7 @@
     <Content Include="ma_maestro_g8.Master" />
     <Content Include="ma_cooordinador_g8.Master" />
     <Content Include="ma_admin_g8.Master" />
+    <Content Include="ReporteCalificacionCatedratico_g8.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="pg_admin_inicio_g8.aspx" />
@@ -263,6 +270,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Calificacion_Catedratico_g8.aspx.cs">
+      <DependentUpon>Calificacion_Catedratico_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calificacion_Catedratico_g8.aspx.designer.cs">
+      <DependentUpon>Calificacion_Catedratico_g8.aspx</DependentUpon>
+    </Compile>
     <Compile Include="coordinator_master_g8.Master.cs">
       <DependentUpon>coordinator_master_g8.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -386,6 +400,13 @@
       <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteCalificacionCatedratico_g8.aspx.cs">
+      <DependentUpon>ReporteCalificacionCatedratico_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteCalificacionCatedratico_g8.aspx.designer.cs">
+      <DependentUpon>ReporteCalificacionCatedratico_g8.aspx</DependentUpon>
+    </Compile>
     <Compile Include="teacher_master_g8.Master.cs">
       <DependentUpon>teacher_master_g8.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

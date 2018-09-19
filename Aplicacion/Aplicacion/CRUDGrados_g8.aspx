@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main_master_g8.Master" AutoEventWireup="true" CodeBehind="CRUDGrados_g8.aspx.cs" Inherits="Aplicacion.CRUDGrados_g8" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ma_principal_g8.Master" AutoEventWireup="true" CodeBehind="CRUDGrados_g8.aspx.cs" Inherits="Aplicacion.CRUDGrados_g8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
@@ -49,4 +49,5 @@
     </p>
     <p>
         <asp:Button ID="BotonModificar" runat="server" Text="Modificar Grado" OnClick="BotonModificar_Click" />  </p>
+
 </asp:Content>
