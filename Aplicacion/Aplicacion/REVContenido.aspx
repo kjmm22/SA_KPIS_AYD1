@@ -24,17 +24,18 @@
                       <h3 class="h4">Revisión de Contenido</h3>
                     </div>
                     <div class="card-body">
-                      
                         <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Selección de Archivo</label>
                           <div class="col-sm-9">
-                            <asp:DropDownList ID="DropDownList1" runat="server" class="form-control mb-3">
+                            <asp:DropDownList ID="ddl_archivos_contenido" runat="server" class="form-control mb-3" DataSourceID="SQL_SLPlaner_1" DataTextField="direccion" DataValueField="direccion">
                                     <asp:ListItem>Archivo 1</asp:ListItem>
                                     <asp:ListItem>Archivo 2</asp:ListItem>
-                                    <asp:ListItem>Archivo 3</asp:ListItem>
-                                    <asp:ListItem>Archivo 4</asp:ListItem>
-                                    <asp:ListItem>Archivo 5</asp:ListItem>
                                   </asp:DropDownList>
+                              <asp:SqlDataSource ID="SQL_SLPlaner_1" runat="server" ConnectionString="<%$ ConnectionStrings:slplannercs_leo %>" SelectCommand="SELECT ar.direccion
+FROM archivo ar, actividad ac
+WHERE ar.actividad = ac.actividad
+AND ac.tipo &lt;&gt; 'examen';"></asp:SqlDataSource>
+                              <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                               <asp:Button ID="bt_open_file" class="btn btn-secondary" runat="server" Text="Visualizar Archivo" />
                           </div>
 
