@@ -36,20 +36,20 @@ FROM archivo ar, actividad ac
 WHERE ar.actividad = ac.actividad
 AND ac.tipo &lt;&gt; 'examen';"></asp:SqlDataSource>
                               <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-                              <asp:Button ID="bt_open_file" class="btn btn-secondary" runat="server" Text="Visualizar Archivo" />
+                              <asp:Button ID="bt_open_file" class="btn btn-secondary" runat="server" Text="Visualizar archivo" OnClick="bt_open_file_Click" />
                           </div>
 
                         </div>
                         <div class="form-group row">
                           <label class="col-sm-3 form-control-label">Comentario</label>
                           <div class="col-sm-9">
-                            <asp:TextBox ID="TextBox1" runat="server" class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="tb_observation" runat="server" class="form-control"></asp:TextBox>
                           </div>
                         </div>
                         <div class="form-group row">
                           <div class="col-sm-4 offset-sm-3">
-                            <asp:Button ID="bt_file_denied" class="btn btn-secondary" runat="server" Text="No Aprovar Archivo" />
-                            <asp:Button ID="bt_file_approved" class="btn btn-primary" runat="server" Text="Aprovar Archivo" />
+                            <asp:Button ID="bt_file_denied" class="btn btn-secondary" runat="server" Text="No aprobar archivo" OnClick="bt_file_denied_Click" />
+                            <asp:Button ID="bt_file_approved" class="btn btn-primary" runat="server" Text="Aprobar archivo" OnClick="bt_file_approved_Click" />
                           </div>
                         </div>
                     </div>
