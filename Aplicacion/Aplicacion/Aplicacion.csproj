@@ -644,6 +644,7 @@
     <Content Include="pg_maestro_inicio_g8.aspx" />
     <Content Include="pg_principal_inicio_g8.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="REVContenido.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -780,6 +781,13 @@
       <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REVContenido.aspx.cs">
+      <DependentUpon>REVContenido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REVContenido.aspx.designer.cs">
+      <DependentUpon>REVContenido.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

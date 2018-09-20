@@ -29,7 +29,8 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server" class="page">
+    <div class="page">
+    
     <!-- Main Navbar-->
         <header class="header">
             <nav class="navbar">
@@ -60,42 +61,45 @@
                 <!-- Sidebar Header-->
                 <div class="sidebar-header d-flex align-items-center">
                     <div class="avatar"><img src="ContentUser/img/icon-coordinador.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="title">
-                            <h1 class="h4"><asp:Label ID="lb_username" runat="server" Text="Usuario"></asp:Label></h1>
-                            <p><asp:Label ID="lb_usertype" runat="server" Text="Coordinador"></asp:Label></p>
-                        </div>
-            
+                    <div class="title">
+                        <h1 class="h4"><asp:Label ID="lb_username" runat="server" Text="Usuario"></asp:Label></h1>
+                        <p><asp:Label ID="lb_usertype" runat="server" Text="Coordinador"></asp:Label></p>
                     </div>
-                    <!-- Sidebar Navidation Menus--><span class="heading">Principal</span>
-                    <ul class="list-unstyled">
-                        <li><a href="pg_coordinador_inicio_g8.aspx"> <i class="icon-home"></i>Inicio</a></li>
-                        <li><a href="#dd_teacher" aria-expanded="false" data-toggle="collapse"><i class="icon-user"></i>Maestro(a)</a>
-                            <ul id="dd_teacher" class="collapse list-unstyled ">
-                                <li><a href="#">Revisar Planificación</a></li>
-                                <li><a href="#">Revisar Archivos</a></li>
-                                <li><a href="#">Calificar</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#dd_student" aria-expanded="false" data-toggle="collapse"><i class="icon-user"></i>Estudiantes</a>
-                            <ul id="dd_student" class="collapse list-unstyled ">
-                                <li><a href="#">Ingresar Notar</a></li>
-                                <li><a href="#">Asignar a Curso</a></li>
-                                <li><a href="#">Desasignar de Curso</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#dd_cursos" aria-expanded="false" data-toggle="collapse"><i class="icon-padnote"></i>Cursos</a>
-                            <ul id="dd_cursos" class="collapse list-unstyled ">
-                                <li><a href="#">Ver</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div>
+                </div>
+                <!-- Sidebar Navidation Menus--><span class="heading">Principal</span>
+                <ul class="list-unstyled">
+                    <li><a href="pg_coordinador_inicio_g8.aspx"> <i class="icon-home"></i>Inicio</a></li>
+                    <li><a href="#dd_teacher" aria-expanded="false" data-toggle="collapse"><i class="icon-user"></i>Maestro(a)</a>
+                        <ul id="dd_teacher" class="collapse list-unstyled ">
+                            <li><a href="#">Revisar Planificación</a></li>
+                            <li><a href="#">Revisar Archivos</a></li>
+                            <li><a href="#">Calificar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#dd_student" aria-expanded="false" data-toggle="collapse"><i class="icon-user"></i>Estudiantes</a>
+                        <ul id="dd_student" class="collapse list-unstyled ">
+                            <li><a href="#">Ingresar Notar</a></li>
+                            <li><a href="#">Asignar a Curso</a></li>
+                            <li><a href="#">Desasignar de Curso</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#dd_cursos" aria-expanded="false" data-toggle="collapse"><i class="icon-padnote"></i>Cursos</a>
+                        <ul id="dd_cursos" class="collapse list-unstyled ">
+                            <li><a href="#">Ver</a></li>
+                            <li><a href="REVContenido.aspx">Contenido</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="content-inner">
+                <form id="form1" runat="server" class="form-horizontal">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
-                </div>
+                </form>
             </div>
-    </form>
+        </div>
+    </div>
+    
 
     <!-- JavaScript files-->
     <script src="ContentUser/vendor/jquery/jquery.min.js"></script>
