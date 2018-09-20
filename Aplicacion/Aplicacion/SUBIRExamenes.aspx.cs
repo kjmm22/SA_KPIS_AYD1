@@ -13,7 +13,7 @@ namespace Aplicacion
         {
             string nombre = System.IO.Path.GetFileName(FileUpload1.FileName);
             Label1.Text = nombre;
-            Label2.Text = ListBox1.Text;
+           Label2.Text = ListBox1.Text;
             if (Label1.Text== "Archivo")
             {
 
@@ -31,9 +31,6 @@ namespace Aplicacion
             
         }
 
-        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+      
     }
 }
