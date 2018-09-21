@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.4.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -525,6 +529,8 @@
     <Content Include="ContentUser\vendor\popper.js\umd\popper-utils.min.js" />
     <Content Include="ContentUser\vendor\popper.js\umd\popper.js" />
     <Content Include="ContentUser\vendor\popper.js\umd\popper.min.js" />
+    <Content Include="admin_css_g8.css" />
+    <Content Include="Calificacion_Catedratico_g8.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -588,6 +594,7 @@
     <Content Include="Content\vendor\owl.carousel\owl.carousel.js" />
     <Content Include="Content\vendor\owl.carousel\owl.carousel.min.js" />
     <Content Include="Content\Site.css" />
+    <Content Include="coordinator_css_g8.css" />
     <Content Include="CRUDPlanificacionDirector_g8.aspx" />
     <Content Include="CRUDPlanificacionMaestro_g8.aspx" />
     <Content Include="CRUDCiclos_g8.aspx" />
@@ -605,6 +612,11 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="CRUDProfesores.aspx" />
+    <Content Include="inicio_g8.aspx" />
+    <Content Include="coordinator_master_g8.Master" />
+    <Content Include="admin_master_g8.Master" />
+    <Content Include="itextsharp.dll" />
+    <Content Include="main_master_g8.Master" />
     <Content Include="Content\fonts\landy.eot" />
     <Content Include="Content\fonts\landy.ttf" />
     <Content Include="Content\fonts\landy.woff" />
@@ -638,11 +650,17 @@
     <Content Include="ContentUser\vendor\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="ContentUser\vendor\jquery.cookie\component.json" />
     <Content Include="ContentUser\vendor\jquery.cookie\cookie.jquery.json" />
+    <Content Include="ReporteCalificacionCatedratico_g8.aspx" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="pg_admin_inicio_g8.aspx" />
     <Content Include="pg_coordinador_inicio_g8.aspx" />
     <Content Include="pg_maestro_inicio_g8.aspx" />
     <Content Include="pg_principal_inicio_g8.aspx" />
+    <Content Include="main_css_g8.css" />
+    <Content Include="coordinator_master_g8.Master" />
+    <Content Include="admin_master_g8.Master" />
+    <Content Include="main_master_g8.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="REVContenido.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -679,6 +697,38 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CRUDPlanificacionDirector_g8.aspx.cs">
+      <DependentUpon>CRUDPlanificacionDirector_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDPlanificacionDirector_g8.aspx.designer.cs">
+      <DependentUpon>CRUDPlanificacionDirector_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDPlanificacionMaestro_g8.aspx.cs">
+      <DependentUpon>CRUDPlanificacionMaestro_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDPlanificacionMaestro_g8.aspx.designer.cs">
+      <DependentUpon>CRUDPlanificacionMaestro_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDCiclos_g8.aspx.cs">
+      <DependentUpon>CRUDCiclos_g8.aspx</DependentUpon>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Calificacion_Catedratico_g8.aspx.cs">
+      <DependentUpon>Calificacion_Catedratico_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calificacion_Catedratico_g8.aspx.designer.cs">
+      <DependentUpon>Calificacion_Catedratico_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="coordinator_master_g8.Master.cs">
+      <DependentUpon>coordinator_master_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDCiclos_g8.aspx.designer.cs">
+      <DependentUpon>CRUDCiclos_g8.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CRUDPlanificacionDirector_g8.aspx.cs">
       <DependentUpon>CRUDPlanificacionDirector_g8.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -780,19 +830,89 @@
     <Compile Include="pg_principal_inicio_g8.aspx.designer.cs">
       <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ma_admin_g8.Master.cs">
+      <DependentUpon>ma_admin_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ma_admin_g8.Master.designer.cs">
+      <DependentUpon>ma_admin_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ma_cooordinador_g8.Master.cs">
+      <DependentUpon>ma_cooordinador_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ma_cooordinador_g8.Master.designer.cs">
+      <DependentUpon>ma_cooordinador_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ma_maestro_g8.Master.cs">
+      <DependentUpon>ma_maestro_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ma_maestro_g8.Master.designer.cs">
+      <DependentUpon>ma_maestro_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ma_principal_g8.Master.cs">
+      <DependentUpon>ma_principal_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ma_principal_g8.Master.designer.cs">
+      <DependentUpon>ma_principal_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pg_admin_inicio_g8.aspx.cs">
+      <DependentUpon>pg_admin_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_admin_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_admin_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_coordinador_inicio_g8.aspx.cs">
+      <DependentUpon>pg_coordinador_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_coordinador_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_coordinador_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_maestro_inicio_g8.aspx.cs">
+      <DependentUpon>pg_maestro_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_maestro_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_maestro_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_principal_inicio_g8.aspx.cs">
+      <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_principal_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="REVContenido.aspx.cs">
       <DependentUpon>REVContenido.aspx</DependentUpon>
+    <Compile Include="ReporteCalificacionCatedratico_g8.aspx.cs">
+      <DependentUpon>ReporteCalificacionCatedratico_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteCalificacionCatedratico_g8.aspx.designer.cs">
+      <DependentUpon>ReporteCalificacionCatedratico_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="teacher_master_g8.Master.cs">
+      <DependentUpon>teacher_master_g8.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="REVContenido.aspx.designer.cs">
       <DependentUpon>REVContenido.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ContentUser\vendor\font-awesome\less\" />
-    <Folder Include="ContentUser\vendor\font-awesome\scss\" />
     <Folder Include="Content\vendor\font-awesome\less\" />
     <Folder Include="Content\vendor\font-awesome\scss\" />
     <Folder Include="Content\vendor\jquery.cookie\test\" />

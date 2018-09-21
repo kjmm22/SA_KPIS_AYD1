@@ -28,5 +28,12 @@ namespace Aplicacion
                 lb_usertype.Text = (string)Session["s_type"];
             }
         }
+        
+        protected void bt_logout_Click(object sender, EventArgs e)
+        {
+            Session["s_username"] = null;
+            Session["s_password"] = null;
+            Response.Redirect("pg_principal_inicio_g8.aspx");
+        }
     }
 }

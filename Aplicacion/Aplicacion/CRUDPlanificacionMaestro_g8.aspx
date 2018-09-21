@@ -111,7 +111,7 @@ INNER JOIN grado as g ON se.grado=g.grado WHERE (ap.profesor = @profesor) AND a.
         </table>
     </EmptyDataTemplate>
     <InsertItemTemplate>
-        <tr style="">
+        <tr style="background-color:#DCDCDC;color: #000000;">
             <td>
                 <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insertar" />
                 <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Borrar" />
@@ -298,7 +298,7 @@ WHERE (ap.profesor = @profesor) AND (a.fecha_aprobacion IS NOT NULL) AND (a.apro
         </table>
     </EmptyDataTemplate>
     <InsertItemTemplate>
-        <tr style="">
+        <tr style="background-color:#DCDCDC;color: #000000;">
             <td>
                 <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insertar" />
                 <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Borrar" />

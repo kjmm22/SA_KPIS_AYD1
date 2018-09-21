@@ -37,7 +37,10 @@ namespace Aplicacion
                 l_texto.Text = "No Agregado!";
             }*/
             string con = "Data Source=PABLORP-PC;Initial Catalog=slplanner;Integrated Security=True";
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
             SqlConnection db = new SqlConnection(con);
             db.Open();
             string insert = "insert into actividad (asignacion_profesor, tipo, descripcion, fecha,aprobacion) values (" +
