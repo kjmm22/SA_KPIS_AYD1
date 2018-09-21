@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/teacher_master_g8.Master" AutoEventWireup="true" CodeBehind="CRUDPlanificacionMaestro_g8.aspx.cs" Inherits="Aplicacion.CRUDPlanificacion_g8" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/ma_maestro_g8.Master" AutoEventWireup="true" CodeBehind="CRUDPlanificacionMaestro_g8.aspx.cs" Inherits="Aplicacion.CRUDPlanificacionMaestro_g8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -48,7 +48,7 @@ INNER JOIN grado as g ON se.grado=g.grado WHERE (ap.profesor = @profesor) AND a.
     <br />
     Actividades rechazados<br />
     <br />
-<asp:ListView ID="ListView2" runat="server" DataSourceID="SqlDataSource2" style="text-align: left" OnSelectedIndexChanged="ListView2_SelectedIndexChanged">
+<asp:ListView ID="ListView2" runat="server" DataSourceID="SqlDataSource2" style="text-align: left">
     <AlternatingItemTemplate>
         <tr style="background-color:#FFF8DC;">
             <td>

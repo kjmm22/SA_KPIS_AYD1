@@ -9,8 +9,7 @@
 
 namespace Aplicacion {
     
-    
-    public partial class CRUDPlanificacion_g8 {
+    public partial class CRUDPlanificacionMaestro_g8 {
         
         /// <summary>
         /// Control gv_EditarEliminar.

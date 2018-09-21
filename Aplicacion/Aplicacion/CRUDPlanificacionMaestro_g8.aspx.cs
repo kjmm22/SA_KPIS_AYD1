@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace Aplicacion
 {
-    public partial class CRUDPlanificacion_g8 : System.Web.UI.Page
+    public partial class CRUDPlanificacionMaestro_g8 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,21 +21,8 @@ namespace Aplicacion
             te = "dos";
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         protected void b_agregar_Click(object sender, EventArgs e)
         {
-            /*
-            if (ddl_agregar_clase.SelectedIndex > 0) {
-                l_texto.Text = "Agregado!";
-            }
-            else
-            {
-                l_texto.Text = "No Agregado!";
-            }*/
             string con = "Data Source=PABLORP-PC;Initial Catalog=slplanner;Integrated Security=True";
             SqlConnection db = new SqlConnection(con);
             db.Open();

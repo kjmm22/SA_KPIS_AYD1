@@ -11,7 +11,6 @@ namespace Aplicacion {
     
     
     public partial class main_master_g81 {
-        
         protected global::System.Web.UI.WebControls.LinkButton lbuPageMain;
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         protected global::System.Web.UI.WebControls.LinkButton lbuAbout;
