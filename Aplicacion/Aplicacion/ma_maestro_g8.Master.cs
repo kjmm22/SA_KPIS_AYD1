@@ -24,10 +24,11 @@ namespace Aplicacion
             }
             else
             {
-                lb_username.Text = "Usuario activo: " + (string)Session["s_username"] + " |";
+                lb_username.Text = (string)Session["s_username"];
+                lb_usertype.Text = (string)Session["s_type"];
             }
         }
-
+        
         protected void bt_logout_Click(object sender, EventArgs e)
         {
             Session["s_username"] = null;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿//------------------------------------------------------------------------------
 // <generado automáticamente>
 //     Este código fue generado por una herramienta.
@@ -82,6 +83,17 @@ namespace Aplicacion {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
+=======
+﻿namespace Aplicacion {
+    public partial class inicio_g8 {
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+>>>>>>> G8_ContenidoPg
         protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
