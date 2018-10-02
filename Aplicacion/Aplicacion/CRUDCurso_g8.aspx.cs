@@ -10,7 +10,7 @@ using System.Configuration;
 
 namespace Aplicacion
 {
-    public partial class CRUDSalon_g8 : System.Web.UI.Page
+    public partial class CRUDCurso_g8 : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerCS"].ToString());
         protected void Page_Load(object sender, EventArgs e)
@@ -21,9 +21,10 @@ namespace Aplicacion
         protected void Button1_Click(object sender, EventArgs e)
         {
             string nom;
-            nom = TextBoxNombreSalon.Text;
+            nom = TextBoxNombreCurso.Text;
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerCS"].ToString());
             con.Open();
-            string consulta = "INSERT INTO salon values('" + nom + "');";
+            string consulta = "INSERT INTO curso values('" + nom + "');";
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteScalar();
             con.Close();
@@ -35,7 +36,7 @@ namespace Aplicacion
             string id;
             id = DropDownList1.SelectedValue;
             con.Open();
-            string consulta = "delete from salon where salon='"+id+"';";
+            string consulta = "delete from curso where curso='"+id+"';";
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteScalar();
             con.Close();
@@ -48,7 +49,7 @@ namespace Aplicacion
             nombreviejo = DropDownList2.SelectedValue;
             nombrenuevo = TextBoxModificar.Text;
             con.Open();
-            string consulta = "UPDATE salon SET ubicacion = '"+nombrenuevo+"' WHERE salon = '"+nombreviejo+"';";
+            string consulta = "UPDATE curso SET nombre = '"+nombrenuevo+"' WHERE curso = '"+nombreviejo+"';";
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteScalar();
             con.Close();
