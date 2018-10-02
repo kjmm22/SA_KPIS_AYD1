@@ -70,9 +70,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\practica2_grupo8\Aplicacion\Aplicacion.Tests\BDDRevisionExamenSteps.cs">
-      <Link>BDDRevisionExamenSteps.cs</Link>
-    </Compile>
     <Compile Include="BDDRevisionExamen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
