@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace Aplicacion
 {
-    public partial class CRUDPlanificacion_g8 : System.Web.UI.Page
+    public partial class CRUDPlanificacionMaestro_g8 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,23 +22,11 @@ namespace Aplicacion
             te = "dos";
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         protected void b_agregar_Click(object sender, EventArgs e)
         {
-            /*
-            if (ddl_agregar_clase.SelectedIndex > 0) {
-                l_texto.Text = "Agregado!";
-            }
-            else
-            {
-                l_texto.Text = "No Agregado!";
-            }*/
-            string con = "Data Source=PABLORP-PC;Initial Catalog=slplanner;Integrated Security=True";
-            SqlConnection db = new SqlConnection(con);
+            //string con = "Data Source=PABLORP-PC;Initial Catalog=slplanner;Integrated Security=True";
+            //SqlConnection db = new SqlConnection(con);
+            SqlConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerCS"].ToString());
             db.Open();
             string insert = "insert into actividad (asignacion_profesor, tipo, descripcion, fecha,aprobacion) values (" +
                 ddl_agregar_clase.SelectedValue.ToString() +",'"+tb_tipo.Text+"','"+tb_descripcion.Text+"','"+ DateTime.Now.Date.ToString("dd/MM/yyyy") + "',0)";
