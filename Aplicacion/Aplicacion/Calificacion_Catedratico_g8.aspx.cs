@@ -11,7 +11,7 @@ namespace Aplicacion
 {
     public partial class Calificacion_Catedratico_g8 : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerConnectionString"].ToString());
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerCS"].ToString());
         int p1, p2, p3, p4, p5, nota;
         protected void Page_Load(object sender, EventArgs e)
         {

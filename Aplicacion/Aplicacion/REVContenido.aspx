@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ma_cooordinador_g8.Master" AutoEventWireup="true" CodeBehind="REVContenido.aspx.cs" Inherits="Aplicacion.REVContenido" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginasMaster/ma_coordinador_g8.Master" AutoEventWireup="true" CodeBehind="REVContenido.aspx.cs" Inherits="Aplicacion.REVContenido" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -31,11 +31,10 @@
                                     <asp:ListItem>Archivo 1</asp:ListItem>
                                     <asp:ListItem>Archivo 2</asp:ListItem>
                                   </asp:DropDownList>
-                              <asp:SqlDataSource ID="SQL_SLPlaner_1" runat="server" ConnectionString="<%$ ConnectionStrings:slplannercs_leo %>" SelectCommand="SELECT ar.direccion
+                              <asp:SqlDataSource ID="SQL_SLPlaner_1" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT ar.direccion
 FROM archivo ar, actividad ac
 WHERE ar.actividad = ac.actividad
 AND ac.tipo &lt;&gt; 'examen';"></asp:SqlDataSource>
-                              <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                               <asp:Button ID="bt_open_file" class="btn btn-secondary" runat="server" Text="Visualizar archivo" OnClick="bt_open_file_Click" />
                           </div>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ma_principal_g8.Master" AutoEventWireup="true" CodeBehind="Calificacion_Catedratico_g8.aspx.cs" Inherits="Aplicacion.Calificacion_Catedratico_g8" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginasMaster/ma_coordinador_g8.Master" AutoEventWireup="true" CodeBehind="Calificacion_Catedratico_g8.aspx.cs" Inherits="Aplicacion.Calificacion_Catedratico_g8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -6,7 +6,7 @@
     <p>
         <h4>Escoja el catedratico a calificar</h4>
         <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="Catedraticos" DataTextField="nombre" DataValueField="nombre"></asp:DropDownList>
-        <asp:SqlDataSource ID="Catedraticos" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT [nombre], [profesor] FROM [profesor] WHERE ([tipo] = @tipo)">
+        <asp:SqlDataSource ID="Catedraticos" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT [nombre], [profesor] FROM [profesor] WHERE ([tipo] = @tipo)">
             <SelectParameters>
                 <asp:Parameter DefaultValue="3" Name="tipo" Type="Int32" />
             </SelectParameters>

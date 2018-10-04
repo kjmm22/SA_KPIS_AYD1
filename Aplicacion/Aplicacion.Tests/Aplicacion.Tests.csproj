@@ -5,12 +5,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AF4E2623-FD91-4B7A-93EB-F41DEEC3BA14}</ProjectGuid>
+    <ProjectGuid>{13A88194-EE54-4722-AFB6-7813910DC991}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Aplicacion.Tests</RootNamespace>
-    <AssemblyName>Aplicacion.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <RootNamespace>AYD1_Aplicacion.Tests</RootNamespace>
+    <AssemblyName>AYD1_Aplicacion.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <IsCodedUITest>False</IsCodedUITest>
@@ -70,16 +70,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDDRevisionExamen.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDDRevisionExamen.feature</DependentUpon>
-    </Compile>
-    <Compile Include="UTRevisionExamen.cs" />
+    <Compile Include="BDDRevisionExamen.feature.cs" />
     <Compile Include="CalificacionCatedraticoForm.cs" />
     <Compile Include="Catedratico.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CatedraticoTest.cs" />
+    <Compile Include="TestCalificacionCatedratico.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UTRevisionExamen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -90,8 +87,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Aplicacion\Aplicacion.csproj">
-      <Project>{E5841E49-5840-4590-9033-3B30EF82F98E}</Project>
+    <ProjectReference Include="..\AYD1_Aplicacion\Aplicacion.csproj">
+      <Project>{90D6276A-E36D-4CAE-AA17-8CC61804DA03}</Project>
       <Name>Aplicacion</Name>
     </ProjectReference>
   </ItemGroup>

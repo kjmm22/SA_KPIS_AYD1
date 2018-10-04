@@ -15,7 +15,7 @@ namespace Aplicacion
 {
     public partial class ReporteCalificacionCatedratico_g8 : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerConnectionString"].ToString());
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerCS"].ToString());
         DateTime thisDay = DateTime.Today;
 
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main_master_g8.Master" AutoEventWireup="true" CodeBehind="CRUDSalon_g8.aspx.cs" Inherits="Aplicacion.CRUDSalon_g8" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginasMaster/ma_admin_g8.Master" AutoEventWireup="true" CodeBehind="CRUDSalon_g8.aspx.cs" Inherits="Aplicacion.CRUDSalon_g8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
@@ -33,7 +33,7 @@
         <asp:Button ID="BotonEliminar" runat="server" Text="Eliminar Salon" OnClick="BotonEliminar_Click" />
 
     </p>
-    <h4> Modificar Salo</h4>
+    <h4> Modificar Salon</h4>
     
     <p>
         <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="ModificaSalons" DataTextField="ubicacion" DataValueField="salon"></asp:DropDownList>

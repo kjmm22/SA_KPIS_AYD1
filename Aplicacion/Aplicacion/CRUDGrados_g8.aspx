@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ma_principal_g8.Master" AutoEventWireup="true" CodeBehind="CRUDGrados_g8.aspx.cs" Inherits="Aplicacion.CRUDGrados_g8" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginasMaster/ma_admin_g8.Master" AutoEventWireup="true" CodeBehind="CRUDGrados_g8.aspx.cs" Inherits="Aplicacion.CRUDGrados_g8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
@@ -12,7 +12,7 @@
                 <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="MostrarTablaGrados" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT DISTINCT * FROM [grado]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="MostrarTablaGrados" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT DISTINCT * FROM [grado]"></asp:SqlDataSource>
 </p>
         <h4>
         Crear Grado</h4>
@@ -25,7 +25,7 @@
     <h4>Eliminar Grado</h4>   
     <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="Grados" DataTextField="nombre" DataValueField="nombre">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="Grados" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT [nombre] FROM [grado]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="Grados" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT [nombre] FROM [grado]"></asp:SqlDataSource>
 
 
     <p>
@@ -38,7 +38,7 @@
     <p>
         <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="ModificaGrados" DataTextField="nombre" DataValueField="nombre"></asp:DropDownList>
 
-        <asp:SqlDataSource ID="ModificaGrados" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT DISTINCT [nombre] FROM [grado]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="ModificaGrados" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT DISTINCT [nombre] FROM [grado]"></asp:SqlDataSource>
 
     </p>
     <p>

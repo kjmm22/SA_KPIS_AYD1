@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -23,8 +24,9 @@ namespace Aplicacion
 
         protected void b_agregar_Click(object sender, EventArgs e)
         {
-            string con = "Data Source=PABLORP-PC;Initial Catalog=slplanner;Integrated Security=True";
-            SqlConnection db = new SqlConnection(con);
+            //string con = "Data Source=PABLORP-PC;Initial Catalog=slplanner;Integrated Security=True";
+            //SqlConnection db = new SqlConnection(con);
+            SqlConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerCS"].ToString());
             db.Open();
             string insert = "insert into actividad (asignacion_profesor, tipo, descripcion, fecha,aprobacion) values (" +
                 ddl_agregar_clase.SelectedValue.ToString() +",'"+tb_tipo.Text+"','"+tb_descripcion.Text+"','"+ DateTime.Now.Date.ToString("dd/MM/yyyy") + "',0)";

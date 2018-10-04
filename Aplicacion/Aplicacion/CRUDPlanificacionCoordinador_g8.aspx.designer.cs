@@ -10,7 +10,7 @@
 namespace Aplicacion {
     
     
-    public partial class CRUDPlanificacionDirector_g8 {
+    public partial class CRUDPlanificacionCoordinador_g8 {
         
         /// <summary>
         /// Control gv_averificar.

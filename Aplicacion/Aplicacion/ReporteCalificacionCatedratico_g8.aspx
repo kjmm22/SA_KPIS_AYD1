@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ma_principal_g8.Master" AutoEventWireup="true" CodeBehind="ReporteCalificacionCatedratico_g8.aspx.cs" Inherits="Aplicacion.ReporteCalificacionCatedratico_g8" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginasMaster/ma_admin_g8.Master" AutoEventWireup="true" CodeBehind="ReporteCalificacionCatedratico_g8.aspx.cs" Inherits="Aplicacion.ReporteCalificacionCatedratico_g8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -6,7 +6,7 @@
     <h3>Escoja el profesor para generar el reporte</h3>
     <p>
         <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="nombre" DataValueField="nombre"></asp:DropDownList>
-        <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:slplannerConnectionString %>' SelectCommand="SELECT DISTINCT [nombre] FROM [profesor] WHERE ([tipo] = @tipo) ORDER BY [nombre] DESC">
+        <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:slplannerCS %>' SelectCommand="SELECT DISTINCT [nombre] FROM [profesor] WHERE ([tipo] = @tipo) ORDER BY [nombre] DESC">
             <SelectParameters>
                 <asp:Parameter DefaultValue="3" Name="tipo" Type="Int32"></asp:Parameter>
             </SelectParameters>

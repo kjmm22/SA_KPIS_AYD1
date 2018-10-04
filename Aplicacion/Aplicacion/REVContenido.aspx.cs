@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
@@ -32,8 +33,9 @@ namespace Aplicacion
             }
             else
             {
-                String cmConnection = "Data Source = ASUS-LEO\\SQLEXPRESS; Initial Catalog = slplanner; Integrated Security = True";
-                SqlConnection connection = new SqlConnection(cmConnection);
+                //String cmConnection = "Data Source = ASUS-LEO\\SQLEXPRESS; Initial Catalog = slplanner; Integrated Security = True";
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerCS"].ToString());
+                //SqlConnection connection = new SqlConnection(cmConnection);
                 connection.Open();
 
                 SqlParameter prPath = new SqlParameter("@var_path", fPath);
@@ -66,8 +68,9 @@ namespace Aplicacion
             }
             else
             {
-                String cmConnection = "Data Source = ASUS-LEO\\SQLEXPRESS; Initial Catalog = slplanner; Integrated Security = True";
-                SqlConnection connection = new SqlConnection(cmConnection);
+                //String cmConnection = "Data Source = ASUS-LEO\\SQLEXPRESS; Initial Catalog = slplanner; Integrated Security = True";
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["slplannerCS"].ToString());
+                //SqlConnection connection = new SqlConnection(cmConnection);
                 connection.Open();
 
                 SqlParameter prPath = new SqlParameter("@var_path", fPath);

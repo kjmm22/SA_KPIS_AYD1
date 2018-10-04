@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Aplicacion
 {
-    public partial class CRUDPlanificacionDirector_g8 : System.Web.UI.Page
+    public partial class CRUDPlanificacionCoordinador_g8 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
