@@ -1,0 +1,630 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.10.1\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{90D6276A-E36D-4CAE-AA17-8CC61804DA03}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AYD1_Aplicacion</RootNamespace>
+    <AssemblyName>AYD1_Aplicacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.4.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calificacion_Catedratico_g8.aspx" />
+    <Content Include="ContentUser\css\custom.css" />
+    <Content Include="ContentUser\css\fontastic.css" />
+    <Content Include="ContentUser\css\style.blue.css" />
+    <Content Include="ContentUser\css\style.default.css" />
+    <Content Include="ContentUser\css\style.green.css" />
+    <Content Include="ContentUser\css\style.pink.css" />
+    <Content Include="ContentUser\css\style.red.css" />
+    <Content Include="ContentUser\css\style.sea.css" />
+    <Content Include="ContentUser\css\style.violet.css" />
+    <Content Include="ContentUser\fonts\dashboard.svg" />
+    <Content Include="ContentUser\icons-reference\fonts\dashboard.svg" />
+    <Content Include="ContentUser\icons-reference\icons-reference.html" />
+    <Content Include="ContentUser\icons-reference\styles.css" />
+    <Content Include="ContentUser\img\bg.jpg" />
+    <Content Include="ContentUser\img\favicon.ico" />
+    <Content Include="ContentUser\img\icon-admin.jpg" />
+    <Content Include="ContentUser\img\icon-coordinador.jpg" />
+    <Content Include="ContentUser\img\icon-maestro.jpg" />
+    <Content Include="ContentUser\img\map-close.png" />
+    <Content Include="ContentUser\img\map-marker-blue.png" />
+    <Content Include="ContentUser\img\map-marker-default.png" />
+    <Content Include="ContentUser\img\map-marker-green.png" />
+    <Content Include="ContentUser\img\map-marker-pink.png" />
+    <Content Include="ContentUser\img\map-marker-red.png" />
+    <Content Include="ContentUser\img\map-marker-sea.png" />
+    <Content Include="ContentUser\img\map-marker-violet.png" />
+    <Content Include="ContentUser\img\map-marker.png" />
+    <Content Include="ContentUser\img\multiselect-switch.png" />
+    <Content Include="ContentUser\js\charts-custom.js" />
+    <Content Include="ContentUser\js\charts-home.js" />
+    <Content Include="ContentUser\js\front.js" />
+    <Content Include="ContentUser\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="ContentUser\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="ContentUser\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="ContentUser\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="ContentUser\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="ContentUser\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="ContentUser\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="ContentUser\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="ContentUser\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="ContentUser\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="ContentUser\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="ContentUser\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="ContentUser\vendor\chart.js\Chart.js" />
+    <Content Include="ContentUser\vendor\chart.js\Chart.min.js" />
+    <Content Include="ContentUser\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="ContentUser\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="ContentUser\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="ContentUser\vendor\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="ContentUser\vendor\jquery-validation\additional-methods.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\jquery.validate.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\jquery.validate.min.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_ar.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_az.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_bg.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_bn_BD.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_ca.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_cs.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_da.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_de.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_el.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_es.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_es_AR.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_es_PE.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_et.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_eu.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_fa.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_fi.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_fr.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_ge.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_gl.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_he.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_hr.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_hu.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_hy_AM.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_id.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_is.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_it.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_ja.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_ka.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_kk.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_ko.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_lt.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_lv.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_mk.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_my.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_nl.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_no.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_pl.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_pt_BR.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_pt_PT.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_ro.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_ru.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_sd.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_si.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_sk.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_sl.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_sr.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_sr_lat.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_sv.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_th.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_tj.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_tr.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_uk.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_ur.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_vi.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_zh.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\messages_zh_TW.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\methods_de.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\methods_es_CL.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\methods_fi.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\methods_nl.js" />
+    <Content Include="ContentUser\vendor\jquery-validation\localization\methods_pt.js" />
+    <Content Include="ContentUser\vendor\jquery.cookie\jquery.cookie.js" />
+    <Content Include="ContentUser\vendor\jquery.cookie\MIT-LICENSE.txt" />
+    <Content Include="ContentUser\vendor\jquery\core.js" />
+    <Content Include="ContentUser\vendor\jquery\jquery.js" />
+    <Content Include="ContentUser\vendor\jquery\jquery.min.js" />
+    <Content Include="ContentUser\vendor\jquery\jquery.slim.js" />
+    <Content Include="ContentUser\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="ContentUser\vendor\popper.js\esm\popper-utils.js" />
+    <Content Include="ContentUser\vendor\popper.js\esm\popper-utils.min.js" />
+    <Content Include="ContentUser\vendor\popper.js\esm\popper.js" />
+    <Content Include="ContentUser\vendor\popper.js\esm\popper.min.js" />
+    <Content Include="ContentUser\vendor\popper.js\popper-utils.js" />
+    <Content Include="ContentUser\vendor\popper.js\popper-utils.min.js" />
+    <Content Include="ContentUser\vendor\popper.js\popper.js" />
+    <Content Include="ContentUser\vendor\popper.js\popper.min.js" />
+    <Content Include="ContentUser\vendor\popper.js\umd\popper-utils.js" />
+    <Content Include="ContentUser\vendor\popper.js\umd\popper-utils.min.js" />
+    <Content Include="ContentUser\vendor\popper.js\umd\popper.js" />
+    <Content Include="ContentUser\vendor\popper.js\umd\popper.min.js" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\landy-iconfont.css" />
+    <Content Include="Content\css\style.blue.css" />
+    <Content Include="Content\css\style.default.css" />
+    <Content Include="Content\css\style.green.css" />
+    <Content Include="Content\css\style.pink.css" />
+    <Content Include="Content\css\style.red.css" />
+    <Content Include="Content\css\style.sea.css" />
+    <Content Include="Content\css\style.violet.css" />
+    <Content Include="Content\fonts\landy.svg" />
+    <Content Include="Content\icons-reference\fonts\landy.svg" />
+    <Content Include="Content\icons-reference\icons-reference.html" />
+    <Content Include="Content\icons-reference\styles.css" />
+    <Content Include="Content\img\avatar-3.jpg" />
+    <Content Include="Content\img\avatar-5.jpg" />
+    <Content Include="Content\img\cup.svg" />
+    <Content Include="Content\img\feature-1.png" />
+    <Content Include="Content\img\feature-2.png" />
+    <Content Include="Content\img\feature-3.png" />
+    <Content Include="Content\img\hourglass.svg" />
+    <Content Include="Content\img\Macbook.png" />
+    <Content Include="Content\img\medal.svg" />
+    <Content Include="Content\img\preview-1.png" />
+    <Content Include="Content\img\preview-2.png" />
+    <Content Include="Content\img\preview-3.png" />
+    <Content Include="Content\img\quote.svg" />
+    <Content Include="Content\img\template-mac.png" />
+    <Content Include="Content\js\front.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\vendor\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Content\vendor\jquery.cookie\jquery.cookie.js" />
+    <Content Include="Content\vendor\jquery.cookie\MIT-LICENSE.txt" />
+    <Content Include="Content\vendor\jquery\core.js" />
+    <Content Include="Content\vendor\jquery\jquery.js" />
+    <Content Include="Content\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\vendor\jquery\jquery.slim.js" />
+    <Content Include="Content\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Content\vendor\owl.carousel\assets\ajax-loader.gif" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.carousel.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.carousel.min.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.default.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.default.min.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.green.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.theme.green.min.css" />
+    <Content Include="Content\vendor\owl.carousel\assets\owl.video.play.png" />
+    <Content Include="Content\vendor\owl.carousel\owl.carousel.js" />
+    <Content Include="Content\vendor\owl.carousel\owl.carousel.min.js" />
+    <Content Include="CRUDCiclos_g8.aspx" />
+    <Content Include="CRUDCurso_g8.aspx" />
+    <Content Include="CRUDGrados_g8.aspx" />
+    <Content Include="CRUDPlanificacionCoordinador_g8.aspx" />
+    <Content Include="CRUDPlanificacionDirector_g8.aspx" />
+    <Content Include="CRUDPlanificacionMaestro_g8.aspx" />
+    <Content Include="CRUDProfesores.aspx" />
+    <Content Include="CRUDRevisionExamenCoord.aspx" />
+    <Content Include="CRUDSalon_g8.aspx" />
+    <Content Include="CRUDSecciones_g8.aspx" />
+    <Content Include="Entrada_Asistencia_g8.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="CRUDRevisionExamenAdmin.aspx" />
+    <Content Include="pg_admin_inicio_g8.aspx" />
+    <Content Include="pg_coordinador_inicio_g8.aspx" />
+    <Content Include="pg_maestro_inicio_g8.aspx" />
+    <Content Include="pg_principal_inicio_g8.aspx" />
+    <Content Include="ReporteCalificacionCatedratico_g8.aspx" />
+    <Content Include="REVContenido.aspx" />
+    <Content Include="Salida_Asistencia_g8.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="ContentUser\data\addresses.json" />
+    <Content Include="ContentUser\data\countries.json" />
+    <Content Include="ContentUser\fonts\dashboard.eot" />
+    <Content Include="ContentUser\fonts\dashboard.ttf" />
+    <Content Include="ContentUser\fonts\dashboard.woff" />
+    <Content Include="ContentUser\icons-reference\fonts\dashboard.eot" />
+    <Content Include="ContentUser\icons-reference\fonts\dashboard.ttf" />
+    <Content Include="ContentUser\icons-reference\fonts\dashboard.woff" />
+    <Content Include="ContentUser\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="ContentUser\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="ContentUser\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="ContentUser\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="ContentUser\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="ContentUser\vendor\jquery.cookie\component.json" />
+    <Content Include="ContentUser\vendor\jquery.cookie\cookie.jquery.json" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\vendor\jquery.cookie\component.json" />
+    <Content Include="Content\vendor\jquery.cookie\cookie.jquery.json" />
+    <Content Include="Content\vendor\owl.carousel\LICENSE" />
+    <Content Include="Content\icons-reference\fonts\landy.eot" />
+    <Content Include="Content\icons-reference\fonts\landy.ttf" />
+    <Content Include="Content\icons-reference\fonts\landy.woff" />
+    <Content Include="Content\fonts\landy.eot" />
+    <Content Include="Content\fonts\landy.ttf" />
+    <Content Include="Content\fonts\landy.woff" />
+    <None Include="Properties\PublishProfiles\slplanner - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calificacion_Catedratico_g8.aspx.cs">
+      <DependentUpon>Calificacion_Catedratico_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calificacion_Catedratico_g8.aspx.designer.cs">
+      <DependentUpon>Calificacion_Catedratico_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDCiclos_g8.aspx.cs">
+      <DependentUpon>CRUDCiclos_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDCiclos_g8.aspx.designer.cs">
+      <DependentUpon>CRUDCiclos_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDCurso_g8.aspx.cs">
+      <DependentUpon>CRUDCurso_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDCurso_g8.aspx.designer.cs">
+      <DependentUpon>CRUDCurso_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDGrados_g8.aspx.cs">
+      <DependentUpon>CRUDGrados_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDGrados_g8.aspx.designer.cs">
+      <DependentUpon>CRUDGrados_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDPlanificacionCoordinador_g8.aspx.cs">
+      <DependentUpon>CRUDPlanificacionCoordinador_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDPlanificacionCoordinador_g8.aspx.designer.cs">
+      <DependentUpon>CRUDPlanificacionCoordinador_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDPlanificacionDirector_g8.aspx.designer.cs">
+      <DependentUpon>CRUDPlanificacionDirector_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDPlanificacionMaestro_g8.aspx.cs">
+      <DependentUpon>CRUDPlanificacionMaestro_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDPlanificacionMaestro_g8.aspx.designer.cs">
+      <DependentUpon>CRUDPlanificacionMaestro_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDProfesores.aspx.cs">
+      <DependentUpon>CRUDProfesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDProfesores.aspx.designer.cs">
+      <DependentUpon>CRUDProfesores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDRevisionExamenCoord.aspx.cs">
+      <DependentUpon>CRUDRevisionExamenCoord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDRevisionExamenCoord.aspx.designer.cs">
+      <DependentUpon>CRUDRevisionExamenCoord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDSalon_g8.aspx.cs">
+      <DependentUpon>CRUDSalon_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDSalon_g8.aspx.designer.cs">
+      <DependentUpon>CRUDSalon_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDSecciones_g8.aspx.cs">
+      <DependentUpon>CRUDSecciones_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDSecciones_g8.aspx.designer.cs">
+      <DependentUpon>CRUDSecciones_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrada_Asistencia_g8.aspx.cs">
+      <DependentUpon>Entrada_Asistencia_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entrada_Asistencia_g8.aspx.designer.cs">
+      <DependentUpon>Entrada_Asistencia_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasMaster\ma_admin_g8.Master.cs">
+      <DependentUpon>ma_admin_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasMaster\ma_admin_g8.Master.designer.cs">
+      <DependentUpon>ma_admin_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasMaster\ma_coordinador_g8.Master.cs">
+      <DependentUpon>ma_coordinador_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasMaster\ma_coordinador_g8.Master.designer.cs">
+      <DependentUpon>ma_coordinador_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasMaster\ma_maestro_g8.Master.cs">
+      <DependentUpon>ma_maestro_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasMaster\ma_maestro_g8.Master.designer.cs">
+      <DependentUpon>ma_maestro_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasMaster\ma_principal_g8.Master.cs">
+      <DependentUpon>ma_principal_g8.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasMaster\ma_principal_g8.Master.designer.cs">
+      <DependentUpon>ma_principal_g8.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDRevisionExamenAdmin.aspx.cs">
+      <DependentUpon>CRUDRevisionExamenAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDRevisionExamenAdmin.aspx.designer.cs">
+      <DependentUpon>CRUDRevisionExamenAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_admin_inicio_g8.aspx.cs">
+      <DependentUpon>pg_admin_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_admin_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_admin_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_coordinador_inicio_g8.aspx.cs">
+      <DependentUpon>pg_coordinador_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_coordinador_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_coordinador_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_maestro_inicio_g8.aspx.cs">
+      <DependentUpon>pg_maestro_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_maestro_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_maestro_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_principal_inicio_g8.aspx.cs">
+      <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_principal_inicio_g8.aspx.designer.cs">
+      <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteCalificacionCatedratico_g8.aspx.cs">
+      <DependentUpon>ReporteCalificacionCatedratico_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteCalificacionCatedratico_g8.aspx.designer.cs">
+      <DependentUpon>ReporteCalificacionCatedratico_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REVContenido.aspx.cs">
+      <DependentUpon>REVContenido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REVContenido.aspx.designer.cs">
+      <DependentUpon>REVContenido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Salida_Asistencia_g8.aspx.cs">
+      <DependentUpon>Salida_Asistencia_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Salida_Asistencia_g8.aspx.designer.cs">
+      <DependentUpon>Salida_Asistencia_g8.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="PaginasMaster\ma_admin_g8.Master" />
+    <Content Include="PaginasMaster\ma_coordinador_g8.Master" />
+    <Content Include="PaginasMaster\ma_maestro_g8.Master" />
+    <Content Include="PaginasMaster\ma_principal_g8.Master" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\vendor\font-awesome\less\" />
+    <Folder Include="Content\vendor\font-awesome\scss\" />
+    <Folder Include="Content\vendor\jquery.cookie\test\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65332</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65332/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.0\build\SpecFlow.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.10.1\build\NUnit.props'))" />
+  </Target>
+  <Import Project="..\packages\SpecFlow.2.4.0\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
