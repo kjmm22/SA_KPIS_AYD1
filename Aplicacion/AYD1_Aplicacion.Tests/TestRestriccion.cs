@@ -7,8 +7,15 @@ namespace AYD1_Aplicacion.Tests
     public class TestRestriccion
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidarHoraInicioVerdadero()
         {
+            RestriccionProfesor profesor = new RestriccionProfesor
+            {
+                hora_inicio = 8
+                
+            };
+            bool result = profesor.ValidarHoraInicio();
+            Assert.IsTrue(result);
         }
     }
 }
