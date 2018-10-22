@@ -22,10 +22,11 @@ namespace AYD1_Aplicacion
             int profesor;
             hora_inicio = DropDownList2.Text;
             hora_final = DropDownList3.Text;
+            string dia = DropDownList4.SelectedValue;
             profesor = Int32.Parse( DropDownList1.SelectedValue);
             SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["slplannerConnectionString"].ToString());
             con.Open();
-            string consulta = "INSERT INTO restriccion_profesor  values(" + profesor + ",'"+hora_inicio+ "','"+hora_final+ "'); ";
+            string consulta = "INSERT INTO restriccion_profesor  values(" + profesor + ",'"+hora_inicio+ "','"+hora_final+ "','"+dia+"'); ";
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteScalar();
             con.Close();
