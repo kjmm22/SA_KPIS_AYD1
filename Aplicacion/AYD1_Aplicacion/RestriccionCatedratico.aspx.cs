@@ -46,5 +46,20 @@ namespace AYD1_Aplicacion
             Response.Redirect(Request.RawUrl);
         }
 
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            int restriccion;
+            string hora_inicio, hora_final, dia;
+            restriccion = Int32.Parse( DropDownList6.SelectedValue);
+            hora_inicio = DropDownList7.SelectedValue;
+            hora_final = DropDownList8.SelectedValue;
+            dia = DropDownList9.SelectedValue;
+            con.Open();
+            string consulta = "UPDATE restriccion_catedratico SET hora_inicio = '" + hora_inicio + "' and hora_final = '"+hora_final+"' and dia = '"+dia+"' WHERE restriccion = " + restriccion+ ";";
+            SqlCommand cmd = new SqlCommand(consulta, con);
+            cmd.ExecuteScalar();
+            con.Close();
+            Response.Redirect(Request.RawUrl);
+        }
     }
 }
