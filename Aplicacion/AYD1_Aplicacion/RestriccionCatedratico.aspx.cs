@@ -32,5 +32,19 @@ namespace AYD1_Aplicacion
             con.Close();
             Response.Redirect(Request.RawUrl);
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string restriccion = DropDownList5.SelectedValue;
+            
+            SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["slplannerConnectionString"].ToString());
+            con.Open();
+            string consulta = "delete from restriccion_profesor where restriccion = "+restriccion+";";
+            SqlCommand cmd = new SqlCommand(consulta, con);
+            cmd.ExecuteScalar();
+            con.Close();
+            Response.Redirect(Request.RawUrl);
+        }
+
     }
 }

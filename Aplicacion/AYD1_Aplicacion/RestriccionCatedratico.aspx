@@ -44,15 +44,34 @@
             <asp:ListItem Value="8">15:00:00</asp:ListItem>
             <asp:ListItem Value="9">16:00:00</asp:ListItem>
             <asp:ListItem Value="10">17:00:00</asp:ListItem>
+
         </asp:DropDownList>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Profesor:
-        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="nombre" DataValueField="profesor">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Profesor:<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="nombre" DataValueField="profesor">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT [profesor], [nombre] FROM [profesor]"></asp:SqlDataSource>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dia:<asp:DropDownList ID="DropDownList4" runat="server">
+            <asp:ListItem Value="Lunes"></asp:ListItem>
+            <asp:ListItem Value="Martes"></asp:ListItem>
+            <asp:ListItem Value="Miercoles"></asp:ListItem>
+            <asp:ListItem Value="Jueves"></asp:ListItem>
+            <asp:ListItem Value="Viernes"></asp:ListItem>
+        </asp:DropDownList>
+        &nbsp;<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT [profesor], [nombre] FROM [profesor]"></asp:SqlDataSource>
 </p>
 <p>
         <asp:Button ID="Button1" runat="server" Height="45px" OnClick="Button1_Click" Text="Agregar" Width="112px" />
 </p>
     <h3>Eliminar Restriccion</h3>
+    <p>
+
+        <asp:DropDownList ID="DropDownList5" runat="server" DataSourceID="SqlDataSource3" DataTextField="restriccion" DataValueField="restriccion">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT [restriccion] FROM [restriccion_profesor] WHERE ([profesor] = @profesor)">
+            <SelectParameters>
+                <asp:SessionParameter Name="profesor" SessionField="User" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:Button ID="Button2" runat="server" Text="Elminar" Height="43px" OnClick="Button2_Click" Width="96px" />
+
+    </p>
     <h3>Cambiar Restriccion</h3>
 </asp:Content>
