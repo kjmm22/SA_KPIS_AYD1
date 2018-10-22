@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginasMaster/ma_principal_g8.Master" AutoEventWireup="true" CodeBehind="RestriccionCatedratico.aspx.cs" Inherits="AYD1_Aplicacion.RestriccionCatedratico" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginasMaster/ma_maestro_g8.Master" AutoEventWireup="true" CodeBehind="RestriccionCatedratico.aspx.cs" Inherits="AYD1_Aplicacion.RestriccionCatedratico" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -17,7 +17,42 @@
 </asp:SqlDataSource>
     <br />
     <br />
-    <h3>Agregar</h3>
+    <h3>Agregar Restriccion</h3>
+    <p>
+        Hora Inicio:&nbsp;
+        <asp:DropDownList ID="DropDownList2" runat="server">
+            <asp:ListItem Value="1">08:00:00</asp:ListItem>
+            <asp:ListItem Value="2">09:00:00</asp:ListItem>
+            <asp:ListItem Value="3">10:00:00</asp:ListItem>
+            <asp:ListItem Value="4">11:00:00</asp:ListItem>
+            <asp:ListItem Value="5">12:00:00</asp:ListItem>
+            <asp:ListItem Value="6">13:00:00</asp:ListItem>
+            <asp:ListItem Value="7">14:00:00</asp:ListItem>
+            <asp:ListItem Value="8">15:00:00</asp:ListItem>
+            <asp:ListItem Value="9">16:00:00</asp:ListItem>
+            <asp:ListItem Value="10">17:00:00</asp:ListItem>
+        </asp:DropDownList>
+&nbsp; Hora Final:&nbsp;&nbsp;
+        <asp:DropDownList ID="DropDownList3" runat="server">
+            <asp:ListItem Value="1">08:00:00</asp:ListItem>
+            <asp:ListItem Value="2">09:00:00</asp:ListItem>
+            <asp:ListItem Value="3">10:00:00</asp:ListItem>
+            <asp:ListItem Value="4">11:00:00</asp:ListItem>
+            <asp:ListItem Value="5">12:00:00</asp:ListItem>
+            <asp:ListItem Value="6">13:00:00</asp:ListItem>
+            <asp:ListItem Value="7">14:00:00</asp:ListItem>
+            <asp:ListItem Value="8">15:00:00</asp:ListItem>
+            <asp:ListItem Value="9">16:00:00</asp:ListItem>
+            <asp:ListItem Value="10">17:00:00</asp:ListItem>
+        </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Profesor:
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="nombre" DataValueField="profesor">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT [profesor], [nombre] FROM [profesor]"></asp:SqlDataSource>
+</p>
+<p>
+        <asp:Button ID="Button1" runat="server" Height="45px" OnClick="Button1_Click" Text="Agregar" Width="112px" />
+</p>
     <h3>Eliminar Restriccion</h3>
     <h3>Cambiar Restriccion</h3>
 </asp:Content>
