@@ -74,4 +74,50 @@
 
     </p>
     <h3>Cambiar Restriccion</h3>
+    <p>
+        <asp:DropDownList ID="DropDownList6" runat="server" DataSourceID="SqlDataSource4" DataTextField="restriccion" DataValueField="restriccion">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerConnectionString %>" SelectCommand="SELECT [restriccion], [profesor], [hora_inicio], [hora_fin], [dia] FROM [restriccion_profesor]"></asp:SqlDataSource>
+    </p>
+    <p>Hora Inicio:&nbsp;
+        <asp:DropDownList ID="DropDownList7" runat="server">
+            <asp:ListItem Value="1">08:00:00</asp:ListItem>
+            <asp:ListItem Value="2">09:00:00</asp:ListItem>
+            <asp:ListItem Value="3">10:00:00</asp:ListItem>
+            <asp:ListItem Value="4">11:00:00</asp:ListItem>
+            <asp:ListItem Value="5">12:00:00</asp:ListItem>
+            <asp:ListItem Value="6">13:00:00</asp:ListItem>
+            <asp:ListItem Value="7">14:00:00</asp:ListItem>
+            <asp:ListItem Value="8">15:00:00</asp:ListItem>
+            <asp:ListItem Value="9">16:00:00</asp:ListItem>
+            <asp:ListItem Value="10">17:00:00</asp:ListItem>
+        </asp:DropDownList>
+&nbsp; Hora Final:&nbsp;&nbsp;
+        <asp:DropDownList ID="DropDownList8" runat="server">
+            <asp:ListItem Value="1">08:00:00</asp:ListItem>
+            <asp:ListItem Value="2">09:00:00</asp:ListItem>
+            <asp:ListItem Value="3">10:00:00</asp:ListItem>
+            <asp:ListItem Value="4">11:00:00</asp:ListItem>
+            <asp:ListItem Value="5">12:00:00</asp:ListItem>
+            <asp:ListItem Value="6">13:00:00</asp:ListItem>
+            <asp:ListItem Value="7">14:00:00</asp:ListItem>
+            <asp:ListItem Value="8">15:00:00</asp:ListItem>
+            <asp:ListItem Value="9">16:00:00</asp:ListItem>
+            <asp:ListItem Value="10">17:00:00</asp:ListItem>
+
+        </asp:DropDownList>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dia:<asp:DropDownList ID="DropDownList9" runat="server">
+            <asp:ListItem Value="Lunes"></asp:ListItem>
+            <asp:ListItem Value="Martes"></asp:ListItem>
+            <asp:ListItem Value="Miercoles"></asp:ListItem>
+            <asp:ListItem Value="Jueves"></asp:ListItem>
+            <asp:ListItem Value="Viernes"></asp:ListItem>
+        </asp:DropDownList>
+        </p>
+    <p>
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Modificar" />
+    </p>
+    <p>
+
+    </p>
 </asp:Content>
