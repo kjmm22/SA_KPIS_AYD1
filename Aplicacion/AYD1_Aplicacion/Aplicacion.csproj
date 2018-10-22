@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AYD1_Aplicacion</RootNamespace>
     <AssemblyName>AYD1_Aplicacion</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -26,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -280,6 +281,7 @@
     <Content Include="Content\vendor\owl.carousel\assets\owl.video.play.png" />
     <Content Include="Content\vendor\owl.carousel\owl.carousel.js" />
     <Content Include="Content\vendor\owl.carousel\owl.carousel.min.js" />
+    <Content Include="CrearTareas_Quiz.aspx" />
     <Content Include="CRUDCiclos_g8.aspx" />
     <Content Include="CRUDCurso_g8.aspx" />
     <Content Include="CRUDGrados_g8.aspx" />
@@ -385,6 +387,13 @@
     </Compile>
     <Compile Include="Calificacion_Catedratico_g8.aspx.designer.cs">
       <DependentUpon>Calificacion_Catedratico_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearTareas_Quiz.aspx.cs">
+      <DependentUpon>CrearTareas_Quiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearTareas_Quiz.aspx.designer.cs">
+      <DependentUpon>CrearTareas_Quiz.aspx</DependentUpon>
     </Compile>
     <Compile Include="CRUDCiclos_g8.aspx.cs">
       <DependentUpon>CRUDCiclos_g8.aspx</DependentUpon>
