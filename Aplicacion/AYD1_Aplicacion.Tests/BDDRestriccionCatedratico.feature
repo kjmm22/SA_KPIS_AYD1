@@ -6,10 +6,20 @@
 
 @AgregarHorario
 Scenario: Add schedule restriction
-	Given A math exam not checked
-	And a director logged in
-	And a not commented exam
-	When I select a exam not checked
-	Then i get the path of a file
-	And i display a file in another tab
-	And i can comment the selected exam
+	Given a restriction on my schedule
+	When im logged in
+	Then i create a new restriction on the page
+
+@ModificarHorario
+Scenario: Modify schedule restriction
+	Given an existing schedule restriction
+	When I located the schedule restriction
+	And i press modify
+	Then i can modify the specific schedule restriction
+
+@BorrarHorario
+Scenario: Delete schedule restriction
+	Given an existing schedule restriction
+	When i located the schedule restriction
+	And i press delete
+	Then the especific schedule restriction is deleted
