@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -56,7 +57,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,10 +68,23 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
       <HintPath>..\packages\SpecFlow.2.4.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDDRevisionExamen.feature.cs" />
+    <Compile Include="..\..\..\..\Laboratorio\Practica 4\practica2_grupo8\Aplicacion\Aplicacion.Tests\BDD_AsistensiaSteps.cs">
+      <Link>BDD_AsistensiaSteps.cs</Link>
+    </Compile>
+    <Compile Include="BDDRevisionExamen.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDDRevisionExamen.feature</DependentUpon>
+    </Compile>
+    <Compile Include="BDD_Asistensia.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDD_Asistensia.feature</DependentUpon>
+    </Compile>
     <Compile Include="CalificacionCatedraticoForm.cs" />
     <Compile Include="Catedratico.cs" />
     <Compile Include="CatedraticoTest.cs" />
@@ -83,6 +97,10 @@
     <None Include="BDDRevisionExamen.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>BDDRevisionExamen.feature.cs</LastGenOutput>
+    </None>
+    <None Include="BDD_Asistensia.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDD_Asistensia.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
