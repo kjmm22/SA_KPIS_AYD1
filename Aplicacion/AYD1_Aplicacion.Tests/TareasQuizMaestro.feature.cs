@@ -17,37 +17,37 @@ namespace AYD1_Aplicacion.Tests
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Tareas/Quiz")]
+    [TechTalk.SpecRun.FeatureAttribute("TareasQuiz", Description="\tIn order to load a quiz\r\n\tAs a proffesor\r\n\tI want to press a button and validate" +
+        " the file", SourceFile="TareasQuizMaestro.feature", SourceLine=0)]
     public partial class TareasQuizFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "TareasQuiz.feature"
+#line 1 "TareasQuizMaestro.feature"
 #line hidden
         
-        [NUnit.Framework.OneTimeSetUpAttribute()]
+        [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Tareas/Quiz", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TareasQuiz", "\tIn order to load a quiz\r\n\tAs a proffesor\r\n\tI want to press a button and validate" +
+                    " the file", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [NUnit.Framework.OneTimeTearDownAttribute()]
+        [TechTalk.SpecRun.FeatureCleanup()]
         public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
-        [NUnit.Framework.SetUpAttribute()]
         public virtual void TestInitialize()
         {
         }
         
-        [NUnit.Framework.TearDownAttribute()]
+        [TechTalk.SpecRun.ScenarioCleanup()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -56,7 +56,6 @@ namespace AYD1_Aplicacion.Tests
         public virtual void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo);
-            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<NUnit.Framework.TestContext>(NUnit.Framework.TestContext.CurrentContext);
         }
         
         public virtual void ScenarioStart()
@@ -69,22 +68,29 @@ namespace AYD1_Aplicacion.Tests
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Load a Quiz")]
+        [TechTalk.SpecRun.ScenarioAttribute("Load a Quiz", new string[] {
+                "loadquizdirector"}, SourceLine=6)]
         public virtual void LoadAQuiz()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Load a Quiz", null, ((string[])(null)));
-#line 3
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Load a Quiz", null, new string[] {
+                        "loadquizdirector"});
+#line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 4
+#line 8
  testRunner.Given("A file", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 5
+#line 9
  testRunner.When("i press the load button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 6
+#line 10
  testRunner.Then("The type of the file should be validated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.TestRunCleanup()]
+        public virtual void TestRunCleanup()
+        {
+            TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         }
     }
 }
