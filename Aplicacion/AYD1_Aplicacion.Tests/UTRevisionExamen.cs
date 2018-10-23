@@ -9,31 +9,31 @@ namespace Aplicacion.Tests
         [TestMethod]
         public void SoloCoordinador()
         {
-            CRUDRevisionExamen rd = new CRUDRevisionExamen();
-            rd.setTipo(2);
+            CRUDRevisionExamenAdmin rd = new CRUDRevisionExamenAdmin();
+            rd.setTipo("2");
             Assert.IsTrue(rd.tipoValido());
         }
 
         [TestMethod]
         public void SoloDirector()
         {
-            CRUDRevisionExamen rd = new CRUDRevisionExamen();
-            rd.setTipo(1);
+            CRUDRevisionExamenAdmin rd = new CRUDRevisionExamenAdmin();
+            rd.setTipo("1");
             Assert.IsTrue(rd.tipoValido());
         }
 
         [TestMethod]
         public void SoloMaestro()
         {
-            CRUDRevisionExamen rd = new CRUDRevisionExamen();
-            rd.setTipo(3);
+            CRUDRevisionExamenAdmin rd = new CRUDRevisionExamenAdmin();
+            rd.setTipo("3");
             Assert.IsFalse(rd.tipoValido());
         }
 
         [TestMethod]
         public void comentario()
         {
-            CRUDRevisionExamen rd = new CRUDRevisionExamen();
+            CRUDRevisionExamenAdmin rd = new CRUDRevisionExamenAdmin();
             Assert.IsTrue(rd.agregarComentario("Test")) ;
         }
 

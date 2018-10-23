@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Aplicacion.Tests
+namespace AYD1_Aplicacion.Tests
 {
     using TechTalk.SpecFlow;
     
