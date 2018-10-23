@@ -15,9 +15,39 @@ namespace AYD1_Aplicacion.Tests
 
         internal bool Validar_Doc()
         {
-            string extencion = ".doc";
+            string extencion = ".jpg";
 
         if (extencion == arcDoc)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        internal bool Validar_Docx()
+        {
+            string extencion = ".jpg";
+
+            if (extencion == arcDoc)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        internal bool Validar_pdf()
+        {
+            string extencion = ".jpg";
+
+            if (extencion == arcDoc)
             {
                 return true;
             }

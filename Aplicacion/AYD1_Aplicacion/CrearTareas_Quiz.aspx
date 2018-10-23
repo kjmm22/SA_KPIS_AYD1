@@ -35,10 +35,20 @@
         </Table>
     </p>
     <p>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT a.archivo as ID_Examen, a.direccion as Examenes_Publicados, ac.descripcion as Descripcion
+FROM archivo a, actividad ac 
+WHERE a.actividad= ac.actividad AND a.tipo_archivo = 1;
+"></asp:SqlDataSource>
         Visualizar Tareas cargadas al sistema:</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID_Examen" DataSourceID="SqlDataSource2">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <Columns>
+                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="ID_Examen" HeaderText="ID_Examen" InsertVisible="False" ReadOnly="True" SortExpression="ID_Examen" />
+                <asp:BoundField DataField="Examenes_Publicados" HeaderText="Examenes_Publicados" SortExpression="Examenes_Publicados" />
+                <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+            </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -80,6 +90,11 @@
         <tr>
             <td>
 
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT a.archivo as ID_Examen, a.direccion as Examenes_Publicados, ac.descripcion as Descripcion
+FROM archivo a, actividad ac 
+WHERE a.actividad= ac.actividad AND a.tipo_archivo = 2;
+"></asp:SqlDataSource>
+
             </td>
             <td>
 
@@ -91,8 +106,14 @@
     </table>
     <br />
     Visualizar Examenes cargados al sistema:<br />
-    <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID_Examen" DataSourceID="SqlDataSource1">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+        <Columns>
+            <asp:CommandField ShowSelectButton="True" />
+            <asp:BoundField DataField="ID_Examen" HeaderText="ID_Examen" InsertVisible="False" ReadOnly="True" SortExpression="ID_Examen" />
+            <asp:BoundField DataField="Examenes_Publicados" HeaderText="Examenes_Publicados" SortExpression="Examenes_Publicados" />
+            <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+        </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
