@@ -53,16 +53,14 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -295,6 +293,7 @@
     <Content Include="Global.asax" />
     <Content Include="CRUDRevisionExamenAdmin.aspx" />
     <Content Include="pg_admin_inicio_g8.aspx" />
+    <Content Include="pg_Asistencia_g8.aspx" />
     <Content Include="pg_coordinador_inicio_g8.aspx" />
     <Content Include="pg_maestro_inicio_g8.aspx" />
     <Content Include="pg_principal_inicio_g8.aspx" />
@@ -500,6 +499,13 @@
     </Compile>
     <Compile Include="pg_admin_inicio_g8.aspx.designer.cs">
       <DependentUpon>pg_admin_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_Asistencia_g8.aspx.cs">
+      <DependentUpon>pg_Asistencia_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_Asistencia_g8.aspx.designer.cs">
+      <DependentUpon>pg_Asistencia_g8.aspx</DependentUpon>
     </Compile>
     <Compile Include="pg_coordinador_inicio_g8.aspx.cs">
       <DependentUpon>pg_coordinador_inicio_g8.aspx</DependentUpon>
