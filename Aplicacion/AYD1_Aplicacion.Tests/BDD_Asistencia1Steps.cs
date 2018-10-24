@@ -23,7 +23,7 @@ namespace AYD1_Aplicacion.Tests
         [When(@"she or he logs in")]
         public void WhenSheOrHeLogsIn()
         {
-            result = mn.verificarTipoUsuarioDirector()
+            result = mn.verificarTipoUsuarioDirector();
         }
         
         [Then(@"a record appears with the teacher's attendance")]

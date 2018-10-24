@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using TechTalk.SpecFlow;
 
 namespace AYD1_Aplicacion.Tests
@@ -6,76 +7,99 @@ namespace AYD1_Aplicacion.Tests
     [Binding]
     public class BDD_PermisosSteps
     {
+        private maestroNodo mn = new maestroNodo();
+        private bool result;
+        private bool resultPermiso;
+        private bool PermisosPendientes;
+        private bool resultIngresoPermiso;
+
         [Given(@"A permission not checked")]
         public void GivenAPermissionNotChecked()
         {
-            ScenarioContext.Current.Pending();
+            mn.permiso = false;
+            resultPermiso = mn.verificarEstadoPermiso();
         }
-        
+
         [Given(@"A director logged in")]
-        public void GivenADirectorLoggedIn()
+        public void GivenADirectorLoggedIn(String nombreDirector, int puesto)
         {
-            ScenarioContext.Current.Pending();
+            mn.nombre = nombreDirector;
+            mn.puesto = 1;
+            // 1: Director
+            // 2: Coordinador
+            // 3: Maestro
+
+            result = mn.verificarTipoUsuarioDirector();
         }
         
         [Given(@"I have to enter application for permission")]
-        public void GivenIHaveToEnterApplicationForPermission()
+        public void GivenIHaveToEnterApplicationForPermission(String nombreProfesor, int puesto)
         {
-            ScenarioContext.Current.Pending();
+            mn.nombre = nombreProfesor;
+            mn.puesto = 3;
+            // 1: Director
+            // 2: Coordinador
+            // 3: Maestro
         }
-        
+
         [Given(@"I teacher logged in")]
         public void GivenITeacherLoggedIn()
         {
-            ScenarioContext.Current.Pending();
+            result = mn.verificarTipoUsuarioMaestro();
         }
         
         [When(@"I press pending permits")]
-        public void WhenIPressPendingPermits()
+        public void WhenIPressPendingPermits(int cantidad)
         {
-            ScenarioContext.Current.Pending();
+            mn.cantidadPermisos = 5;
+            PermisosPendientes = mn.verificarPermisosPendientes();
         }
         
         [When(@"I press enter permission")]
         public void WhenIPressEnterPermission()
         {
-            ScenarioContext.Current.Pending();
+            mn.ingreso = true;
+            resultIngresoPermiso = mn.ingresoCorrecto();
         }
         
         [Then(@"I select a permission")]
         public void ThenISelectAPermission()
         {
-            ScenarioContext.Current.Pending();
+            mn.seleccionado = true;
+            PermisosPendientes = mn.permisoSeleccionado();
         }
         
         [Then(@"The text of the permission is displayed on the screen")]
         public void ThenTheTextOfThePermissionIsDisplayedOnTheScreen()
         {
-            ScenarioContext.Current.Pending();
+            mn.display = true;
+            PermisosPendientes = mn.mostrarEnDisplay();
         }
         
         [Then(@"I can authorizes or denies Permission")]
         public void ThenICanAuthorizesOrDeniesPermission()
         {
-            ScenarioContext.Current.Pending();
+            Assert.IsTrue(PermisosPendientes);
         }
         
         [Then(@"A textbox is displayed on the screen")]
         public void ThenATextboxIsDisplayedOnTheScreen()
         {
-            ScenarioContext.Current.Pending();
+            mn.display = true;
+            resultIngresoPermiso = mn.mostrarEnDisplay();
         }
         
         [Then(@"I click finish to enter application for permission")]
         public void ThenIClickFinishToEnterApplicationForPermission()
         {
-            ScenarioContext.Current.Pending();
+            mn.ingreso = true;
+            resultIngresoPermiso = mn.ingresoCorrecto();
         }
         
         [Then(@"I must wait for the director to authorize or deny permission")]
         public void ThenIMustWaitForTheDirectorToAuthorizeOrDenyPermission()
         {
-            ScenarioContext.Current.Pending();
+            Assert.IsTrue(resultIngresoPermiso);
         }
     }
 }
