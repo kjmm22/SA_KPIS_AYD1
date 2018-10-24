@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace AYD1_Aplicacion
 {
-    public partial class CrearTareas_Quiz : System.Web.UI.Page
+    public partial class CrearTareas_QuizCatedratico : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

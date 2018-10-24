@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginasMaster/ma_maestro_g8.Master" AutoEventWireup="true" CodeBehind="CrearTareas_Quiz_Catedratico.aspx.cs" Inherits="AYD1_Aplicacion.CrearTareas_Quiz" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginasMaster/ma_maestro_g8.Master" AutoEventWireup="true" CodeBehind="CrearTareas_Quiz_Catedratico.aspx.cs" Inherits="AYD1_Aplicacion.CrearTareas_QuizCatedratico" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -35,19 +35,25 @@
         </Table>
     </p>
     <p>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT a.archivo as ID_Examen, a.direccion as Examenes_Publicados, ac.descripcion as Descripcion
-FROM archivo a, actividad ac 
-WHERE a.actividad= ac.actividad AND a.tipo_archivo = 1;
-"></asp:SqlDataSource>
         Visualizar Tareas cargadas al sistema:</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID_Examen" DataSourceID="SqlDataSource2">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT a.descripcion as 'Actividad', ar.direccion as 'Archivo'
+FROM actividad a
+INNER JOIN asignacion_profesor ap ON a.asignacion_profesor=ap.asignacion_profesor
+INNER JOIN archivo ar ON a.actividad=ar.actividad
+INNER JOIN profesor p ON ap.profesor=p.profesor
+WHERE p.nombre=@prof AND ar.tipo_archivo=1;">
+            <SelectParameters>
+                <asp:SessionParameter DefaultValue="" Name="prof" SessionField="s_username" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </p>
+    <p>
+        <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AllowSorting="True" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:CommandField ShowSelectButton="True" />
-                <asp:BoundField DataField="ID_Examen" HeaderText="ID_Examen" InsertVisible="False" ReadOnly="True" SortExpression="ID_Examen" />
-                <asp:BoundField DataField="Examenes_Publicados" HeaderText="Examenes_Publicados" SortExpression="Examenes_Publicados" />
-                <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                <asp:BoundField DataField="Actividad" HeaderText="Actividad" SortExpression="Actividad" />
+                <asp:BoundField DataField="Archivo" HeaderText="Archivo" SortExpression="Archivo" />
             </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -90,12 +96,7 @@ WHERE a.actividad= ac.actividad AND a.tipo_archivo = 1;
         <tr>
             <td>
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT a.archivo as ID_Examen, a.direccion as Examenes_Publicados, ac.descripcion as Descripcion
-FROM archivo a, actividad ac 
-WHERE a.actividad= ac.actividad AND a.tipo_archivo = 2;
-"></asp:SqlDataSource>
-
-            </td>
+                &nbsp;</td>
             <td>
 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -105,14 +106,11 @@ WHERE a.actividad= ac.actividad AND a.tipo_archivo = 2;
         </tr>
     </table>
     <br />
-    Visualizar Examenes cargados al sistema:<br />
-    <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID_Examen" DataSourceID="SqlDataSource1">
+    Visualizar Examenes cargados al sistema:<asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
-            <asp:CommandField ShowSelectButton="True" />
-            <asp:BoundField DataField="ID_Examen" HeaderText="ID_Examen" InsertVisible="False" ReadOnly="True" SortExpression="ID_Examen" />
-            <asp:BoundField DataField="Examenes_Publicados" HeaderText="Examenes_Publicados" SortExpression="Examenes_Publicados" />
-            <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+            <asp:BoundField DataField="Actividad" HeaderText="Actividad" SortExpression="Actividad" />
+            <asp:BoundField DataField="archivo" HeaderText="archivo" SortExpression="archivo" />
         </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -125,5 +123,15 @@ WHERE a.actividad= ac.actividad AND a.tipo_archivo = 2;
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:slplannerCS %>" SelectCommand="SELECT a.descripcion as Actividad, ar.direccion as archivo
+FROM actividad a
+INNER JOIN asignacion_profesor ap ON a.asignacion_profesor=ap.asignacion_profesor
+INNER JOIN archivo ar ON a.actividad=ar.actividad
+INNER JOIN profesor p ON ap.profesor=p.profesor
+WHERE p.nombre=@prof AND ar.tipo_archivo = 2;">
+        <SelectParameters>
+            <asp:SessionParameter Name="prof" SessionField="s_username" />
+        </SelectParameters>
+    </asp:SqlDataSource>
     <br />
 </asp:Content>
