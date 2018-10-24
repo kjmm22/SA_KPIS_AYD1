@@ -18,21 +18,21 @@ namespace AYD1_Aplicacion.Tests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("BDDRevisionExamen")]
-    public partial class BDDRevisionExamenFeature
+    [NUnit.Framework.DescriptionAttribute("BDD_Asistencia")]
+    public partial class BDD_AsistenciaFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "BDDRevisionExamen.feature"
+#line 1 "BDD_Asistencia_1.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDDRevisionExamen", "\tIn order to check an exam\r\n\tAs a director or a coordinator\r\n\tI want to be logged" +
-                    " in\r\n\tTo check and comment a exam that is upload", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDD_Asistencia", "\tIn order to make sure a teacher came to the school\r\n\tAs a principal\r\n\tI want to " +
+                    "have a register of the attendance of them", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -71,29 +71,22 @@ namespace AYD1_Aplicacion.Tests
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("check a math exam of a professor")]
-        [NUnit.Framework.CategoryAttribute("testExam")]
-        public virtual void CheckAMathExamOfAProfessor()
+        [NUnit.Framework.DescriptionAttribute("Theacher\'s Attendance")]
+        [NUnit.Framework.CategoryAttribute("validarTipoUsuarioDirector")]
+        public virtual void TheachersAttendance()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("check a math exam of a professor", null, new string[] {
-                        "testExam"});
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Theacher\'s Attendance", null, new string[] {
+                        "validarTipoUsuarioDirector"});
+#line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 8
+ testRunner.Given("a principal\'s profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.Given("A math exam not checked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When("she or he log-in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.And("a director logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
- testRunner.And("a not commented exam", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
- testRunner.When("I select a exam not checked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
- testRunner.Then("i get the path of a file", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 14
- testRunner.And("i display a file in another tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
- testRunner.And("i can comment the selected exam", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("it verify the principal\'s profile before a record appears with the teacher\'s atte" +
+                    "ndance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

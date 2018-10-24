@@ -18,21 +18,21 @@ namespace AYD1_Aplicacion.Tests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("BDD_Asistensia")]
-    public partial class BDD_AsistensiaFeature
+    [NUnit.Framework.DescriptionAttribute("BDD_Asistencia_2")]
+    public partial class BDD_Asistencia_2Feature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "BDD_Asistensia.feature"
+#line 1 "BDD_Asistencia_2.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDD_Asistensia", "\tIn order to make sure a teacher came to the school\r\n\tAs a principal\r\n\tI want to " +
-                    "have a register of the attendance of them", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDD_Asistencia_2", "\tIn order to record my attendance\r\n\tAs a teacher\r\n\tI want to log-in and register " +
+                    "it", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -71,21 +71,21 @@ namespace AYD1_Aplicacion.Tests
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Theacher\'s Attendance")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void TheachersAttendance()
+        [NUnit.Framework.DescriptionAttribute("Register Teacher\'s Attendance")]
+        [NUnit.Framework.CategoryAttribute("validarTipoUsuarioMaestroCoordinador")]
+        public virtual void RegisterTeachersAttendance()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Theacher\'s Attendance", null, new string[] {
-                        "mytag"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register Teacher\'s Attendance", null, new string[] {
+                        "validarTipoUsuarioMaestroCoordinador"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 8
- testRunner.Given("a principal profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("teacher\'s profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When("she or he logs in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the teacher logs in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.Then("a record appears with the teacher\'s assistance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("register teacher\'s attendance", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

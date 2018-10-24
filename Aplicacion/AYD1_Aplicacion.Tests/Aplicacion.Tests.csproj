@@ -86,10 +86,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDDRevisionExamen.feature</DependentUpon>
     </Compile>
+    <Compile Include="BDD_Asistencia1Steps.cs" />
+    <Compile Include="BDD_Asistencia_1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDD_Asistencia_1.feature</DependentUpon>
+    </Compile>
+    <Compile Include="BDD_Asistencia_2.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDD_Asistencia_2.feature</DependentUpon>
+    </Compile>
+    <Compile Include="BDD_Asistencia_2Steps.cs" />
     <Compile Include="BDD_PermisosSteps.cs" />
     <Compile Include="CalificacionCatedraticoForm.cs" />
     <Compile Include="Catedratico.cs" />
     <Compile Include="CatedraticoTest.cs" />
+    <Compile Include="maestroNodo.cs" />
     <Compile Include="TestCalificacionCatedratico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UTRevisionExamen.cs" />
@@ -104,9 +117,13 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>BDDRevisionExamen.feature.cs</LastGenOutput>
     </None>
-    <None Include="BDD_Asistensia.feature">
+    <None Include="BDD_Asistencia_1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>BDD_Asistensia.feature.cs</LastGenOutput>
+      <LastGenOutput>BDD_Asistencia_1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="BDD_Asistencia_2.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BDD_Asistencia_2.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
