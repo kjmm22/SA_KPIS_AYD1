@@ -295,6 +295,7 @@
     <Content Include="pg_admin_inicio_g8.aspx" />
     <Content Include="pg_Asistencia_g8.aspx" />
     <Content Include="pg_coordinador_inicio_g8.aspx" />
+    <Content Include="pg_maestro_asistencia_g8.aspx" />
     <Content Include="pg_maestro_inicio_g8.aspx" />
     <Content Include="pg_principal_inicio_g8.aspx" />
     <Content Include="ReporteCalificacionCatedratico_g8.aspx" />
@@ -513,6 +514,13 @@
     </Compile>
     <Compile Include="pg_coordinador_inicio_g8.aspx.designer.cs">
       <DependentUpon>pg_coordinador_inicio_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg_maestro_asistencia_g8.aspx.cs">
+      <DependentUpon>pg_maestro_asistencia_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_maestro_asistencia_g8.aspx.designer.cs">
+      <DependentUpon>pg_maestro_asistencia_g8.aspx</DependentUpon>
     </Compile>
     <Compile Include="pg_maestro_inicio_g8.aspx.cs">
       <DependentUpon>pg_maestro_inicio_g8.aspx</DependentUpon>
