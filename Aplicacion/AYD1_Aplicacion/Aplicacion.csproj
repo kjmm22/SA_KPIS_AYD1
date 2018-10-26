@@ -298,6 +298,7 @@
     <Content Include="pg_maestro_inicio_g8.aspx" />
     <Content Include="pg_principal_inicio_g8.aspx" />
     <Content Include="ReporteCalificacionCatedratico_g8.aspx" />
+    <Content Include="RestriccionCatedratico.aspx" />
     <Content Include="REVContenido.aspx" />
     <Content Include="Salida_Asistencia_g8.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -525,6 +526,9 @@
     <Compile Include="pg_principal_inicio_g8.aspx.designer.cs">
       <DependentUpon>pg_principal_inicio_g8.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ma_cooordinador_g8.Master.designer.cs">
+      <DependentUpon>ma_cooordinador_g8.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReporteCalificacionCatedratico_g8.aspx.cs">
       <DependentUpon>ReporteCalificacionCatedratico_g8.aspx</DependentUpon>
@@ -532,6 +536,13 @@
     </Compile>
     <Compile Include="ReporteCalificacionCatedratico_g8.aspx.designer.cs">
       <DependentUpon>ReporteCalificacionCatedratico_g8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RestriccionCatedratico.aspx.cs">
+      <DependentUpon>RestriccionCatedratico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RestriccionCatedratico.aspx.designer.cs">
+      <DependentUpon>RestriccionCatedratico.aspx</DependentUpon>
     </Compile>
     <Compile Include="REVContenido.aspx.cs">
       <DependentUpon>REVContenido.aspx</DependentUpon>
