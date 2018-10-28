@@ -69,7 +69,11 @@
                     <!-- Sidebar Navidation Menus--><span class="heading">Principal</span>
                     <ul class="list-unstyled">
                         <li><a href="pg_admin_inicio_g8.aspx"> <i class="icon-home"></i>Inicio</a></li>
+
                         <li><a href="#dd_admin" aria-expanded="false" data-toggle="collapse"><i class="icon-user"></i>Administracion</a>
+
+                        <li><a href="#dd_teacher" aria-expanded="false" data-toggle="collapse"><i class="icon-user"></i>Administracion</a>
+
                             <ul id="dd_admin" class="collapse list-unstyled ">
                                 <li><a href="../CRUDSalon_g8.aspx">Salones</a></li>
                                 <li><a href="../CRUDSecciones_g8.aspx">Secciones</a></li>

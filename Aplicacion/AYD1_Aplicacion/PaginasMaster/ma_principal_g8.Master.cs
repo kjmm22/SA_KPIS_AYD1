@@ -19,7 +19,11 @@ namespace Aplicacion
 
         protected void bt_login_Click(object sender, EventArgs e)
         {
+
             String cmConnection = "Data Source=.\\SQLEXPRESS;Initial Catalog=slplanner;Integrated Security=True";
+
+            String cmConnection = "Data Source=.;Initial Catalog=slplanner;Integrated Security=True";
+
 //#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
   //          string cmConnection = System.Configuration.ConfigurationSettings.AppSettings["cadenaCon"];
 //#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
