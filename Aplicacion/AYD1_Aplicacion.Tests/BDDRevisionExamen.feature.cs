@@ -7,12 +7,18 @@
 //      Runtime Version:4.0.30319.42000
 
 
+//      SpecFlow Version:1.9.0.77
+//      SpecFlow Generator Version:1.9.0.0
+//      Runtime Version:4.0.30319.42000
+
+
 //      SpecFlow Version:2.4.0.0
 //      SpecFlow Generator Version:2.4.0.0
 
 //      SpecFlow Version:1.9.0.77
 //      SpecFlow Generator Version:1.9.0.0
 //      Runtime Version:4.0.30319.42000
+
 
 
 // 
@@ -31,9 +37,13 @@ namespace AYD1_Aplicacion.Tests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
 
 
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
+
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
+
 
 
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -46,9 +56,13 @@ namespace AYD1_Aplicacion.Tests
         private static TechTalk.SpecFlow.ITestRunner testRunner;
 
 
+        private static TechTalk.SpecFlow.ITestRunner testRunner;
+
+
         private TechTalk.SpecFlow.ITestRunner testRunner;
 
         private static TechTalk.SpecFlow.ITestRunner testRunner;
+
 
 
         
@@ -56,15 +70,20 @@ namespace AYD1_Aplicacion.Tests
 #line hidden
         
 
+        [NUnit.Framework.TestFixtureSetUpAttribute()]
+
+
         [NUnit.Framework.OneTimeSetUpAttribute()]
+
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDDRevisionExamen", "\tIn order to check an exam\r\n\tAs a director or a coordinator\r\n\tI want to be logged" +
-                    " in\r\n\tTo check and comment a exam that is upload", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BDDRevisionExamen", "In order to check an exam\r\nAs a director or a coordinator\r\nI want to be logged in" +
+                    "\r\nTo check and comment a exam that is upload", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
+
         [NUnit.Framework.OneTimeTearDownAttribute()]
 
 
@@ -77,6 +96,7 @@ namespace AYD1_Aplicacion.Tests
             testRunner.OnFeatureStart(featureInfo);
         }
         
+
         [NUnit.Framework.TestFixtureTearDownAttribute()]
         public virtual void FeatureTearDown()
         {
@@ -101,6 +121,11 @@ namespace AYD1_Aplicacion.Tests
             testRunner.OnScenarioStart(scenarioInfo);
 
 
+        public virtual void ScenarioSetup(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
+        {
+            testRunner.OnScenarioStart(scenarioInfo);
+
+
         public virtual void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo);
@@ -116,6 +141,7 @@ namespace AYD1_Aplicacion.Tests
             testRunner.OnScenarioStart(scenarioInfo);
 
 
+
         }
         
         public virtual void ScenarioCleanup()
@@ -129,6 +155,11 @@ namespace AYD1_Aplicacion.Tests
         public virtual void CheckAMathExamOfAProfessor()
         {
 
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("check a math exam of a professor", new string[] {
+                        "testExam"});
+#line 8
+
+
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("check a math exam of a professor", null, new string[] {
                         "testExam"});
 #line 8
@@ -139,6 +170,7 @@ this.ScenarioInitialize(scenarioInfo);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("check a math exam of a professor", new string[] {
                         "testExam"});
 #line 8
+
 this.ScenarioSetup(scenarioInfo);
 #line 9
  testRunner.Given("A math exam not checked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");

@@ -326,7 +326,6 @@
     <Content Include="ReporteCalificacionCatedratico_g8.aspx" />
     <Content Include="RestriccionCatedratico.aspx" />
 
-
     <Content Include="REVContenido.aspx" />
     <Content Include="Salida_Asistencia_g8.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
