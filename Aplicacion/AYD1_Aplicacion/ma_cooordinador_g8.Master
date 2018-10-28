@@ -1,8 +1,4 @@
-
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ma_coordinador_g8.Master.cs" Inherits="Aplicacion.ma_cooordinador_g8" %>
-
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/PaginasMaster/ma_coordinador_g8.Master.cs" Inherits="Aplicacion.ma_cooordinador_g8" %>
-
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ma_cooordinador_g8.master.cs" Inherits="Aplicacion.ma_cooordinador_g8" %>
 
 <!DOCTYPE html>
 
@@ -11,18 +7,18 @@
     <title>SL Planner | Coordinador(a)</title>
     
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="../ContentUser/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ContentUser/vendor/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="../ContentUser/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../ContentUser/css/custom.css">
+    <link rel="stylesheet" href="ContentUser/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ContentUser/css/custom.css">
     <!-- Fontastic Custom icon font-->
-    <link rel="stylesheet" href="../ContentUser/css/fontastic.css">
+    <link rel="stylesheet" href="ContentUser/css/fontastic.css">
     <!-- Google fonts - Poppins -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="../ContentUser/css/style.default.css" id="theme_stylesheet">
+    <link rel="stylesheet" href="ContentUser/css/style.default.css" id="theme_stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="../ContentUser/css/custom.css">
+    <link rel="stylesheet" href="ContentUser/css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="ContentUser/img/favicon.ico">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -64,7 +60,7 @@
             <nav class="side-navbar">
                 <!-- Sidebar Header-->
                 <div class="sidebar-header d-flex align-items-center">
-                    <div class="avatar"><img src="../ContentUser/img/icon-coordinador.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                    <div class="avatar"><img src="ContentUser/img/icon-coordinador.jpg" alt="..." class="img-fluid rounded-circle"></div>
                     <div class="title">
                         <h1 class="h4"><asp:Label ID="lb_username" runat="server" Text="Usuario"></asp:Label></h1>
                         <p><asp:Label ID="lb_usertype" runat="server" Text="Coordinador"></asp:Label></p>
@@ -75,12 +71,9 @@
                     <li><a href="pg_coordinador_inicio_g8.aspx"> <i class="icon-home"></i>Inicio</a></li>
                     <li><a href="#dd_teacher" aria-expanded="false" data-toggle="collapse"><i class="icon-user"></i>Maestro(a)</a>
                         <ul id="dd_teacher" class="collapse list-unstyled ">
-                            <li><a href="../CRUDPlanificacionCoordinador_g8.aspx">Revisar Planificación</a></li>
-                            <li><a href="../CRUDRevisionExamenCoord.aspx">Revisar Examenes</a></li>
-                            <li><a href="../REVContenido.aspx">Revisar Contenido</a></li>
-                            <li><a href="../Entrada_Asistencia_g8.aspx">Entrada</a></li>
-                            <li><a href="../Salida_Asistencia_g8.aspx">Salida</a></li>
-                            <li><a href="../Calificacion_Catedratico_g8.aspx">Calificar</a></li>
+                            <li><a href="#">Revisar Planificación</a></li>
+                            <li><a href="#">Revisar Archivos</a></li>
+                            <li><a href="#">Calificar</a></li>
                         </ul>
                     </li>
                     <li><a href="#dd_student" aria-expanded="false" data-toggle="collapse"><i class="icon-user"></i>Estudiantes</a>
@@ -109,14 +102,14 @@
     
 
     <!-- JavaScript files-->
-    <script src="../ContentUser/vendor/jquery/jquery.min.js"></script>
-    <script src="../ContentUser/vendor/popper.js/umd/popper.min.js"> </script>
-    <script src="../ContentUser/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../ContentUser/vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="../ContentUser/vendor/chart.js/Chart.min.js"></script>
-    <script src="../ContentUser/vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="../ContentUser/js/charts-custom.js"></script>
+    <script src="ContentUser/vendor/jquery/jquery.min.js"></script>
+    <script src="ContentUser/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="ContentUser/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="ContentUser/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="ContentUser/vendor/chart.js/Chart.min.js"></script>
+    <script src="ContentUser/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="ContentUser/js/charts-custom.js"></script>
     <!-- Main File-->
-    <script src="../ContentUser/js/front.js"></script>
+    <script src="ContentUser/js/front.js"></script>
 </body>
 </html>

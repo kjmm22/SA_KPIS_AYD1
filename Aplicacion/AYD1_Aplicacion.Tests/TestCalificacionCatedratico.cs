@@ -7,6 +7,11 @@ namespace Aplicacion.Tests
     public class UnitTest2
     {
         [TestMethod]
+
+        public void TestMethod1()
+        {
+
+
         public void ValidaHoraInicioVerdadero()
         {
             RestriccionCatedratico r = new RestriccionCatedratico
@@ -93,6 +98,7 @@ namespace Aplicacion.Tests
             };
             bool result = r.ValidarRestriccion();
             Assert.IsFalse(result);
+
         }
     }
 }

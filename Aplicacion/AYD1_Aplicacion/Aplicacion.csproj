@@ -1,5 +1,9 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="..\packages\NUnit.3.10.1\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" />
+
   <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
+
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -56,8 +60,13 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+
+    <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+
     <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+
     </Reference>
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
@@ -284,7 +293,10 @@
     <Content Include="CRUDCurso_g8.aspx" />
     <Content Include="CRUDGrados_g8.aspx" />
     <Content Include="CRUDPlanificacionCoordinador_g8.aspx" />
+
+
     <Content Include="CRUDPlanificacionDirector_g8.aspx" />
+
     <Content Include="CRUDPlanificacionMaestro_g8.aspx" />
     <Content Include="CRUDProfesores.aspx" />
     <Content Include="CRUDRevisionExamenCoord.aspx" />
@@ -294,11 +306,20 @@
     <Content Include="Global.asax" />
     <Content Include="CRUDRevisionExamenAdmin.aspx" />
     <Content Include="pg_admin_inicio_g8.aspx" />
+
+    <Content Include="pg_Asistencia_g8.aspx" />
+    <Content Include="pg_coordinador_inicio_g8.aspx" />
+    <Content Include="pg_maestro_asistencia_g8.aspx" />
+    <Content Include="pg_maestro_inicio_g8.aspx" />
+    <Content Include="pg_principal_inicio_g8.aspx" />
+    <Content Include="ReporteCalificacionCatedratico_g8.aspx" />
+
     <Content Include="pg_coordinador_inicio_g8.aspx" />
     <Content Include="pg_maestro_inicio_g8.aspx" />
     <Content Include="pg_principal_inicio_g8.aspx" />
     <Content Include="ReporteCalificacionCatedratico_g8.aspx" />
     <Content Include="RestriccionCatedratico.aspx" />
+
     <Content Include="REVContenido.aspx" />
     <Content Include="Salida_Asistencia_g8.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -352,7 +373,10 @@
     <Content Include="Content\fonts\landy.eot" />
     <Content Include="Content\fonts\landy.ttf" />
     <Content Include="Content\fonts\landy.woff" />
+
+
     <None Include="Properties\PublishProfiles\slplanner - Web Deploy.pubxml" />
+
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -415,9 +439,12 @@
     <Compile Include="CRUDPlanificacionCoordinador_g8.aspx.designer.cs">
       <DependentUpon>CRUDPlanificacionCoordinador_g8.aspx</DependentUpon>
     </Compile>
+
+
     <Compile Include="CRUDPlanificacionDirector_g8.aspx.designer.cs">
       <DependentUpon>CRUDPlanificacionDirector_g8.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="CRUDPlanificacionMaestro_g8.aspx.cs">
       <DependentUpon>CRUDPlanificacionMaestro_g8.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -505,6 +532,14 @@
     <Compile Include="pg_admin_inicio_g8.aspx.designer.cs">
       <DependentUpon>pg_admin_inicio_g8.aspx</DependentUpon>
     </Compile>
+
+    <Compile Include="pg_Asistencia_g8.aspx.cs">
+      <DependentUpon>pg_Asistencia_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_Asistencia_g8.aspx.designer.cs">
+      <DependentUpon>pg_Asistencia_g8.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pg_coordinador_inicio_g8.aspx.cs">
       <DependentUpon>pg_coordinador_inicio_g8.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -512,6 +547,16 @@
     <Compile Include="pg_coordinador_inicio_g8.aspx.designer.cs">
       <DependentUpon>pg_coordinador_inicio_g8.aspx</DependentUpon>
     </Compile>
+
+    <Compile Include="pg_maestro_asistencia_g8.aspx.cs">
+      <DependentUpon>pg_maestro_asistencia_g8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg_maestro_asistencia_g8.aspx.designer.cs">
+      <DependentUpon>pg_maestro_asistencia_g8.aspx</DependentUpon>
+    </Compile>
+
+
     <Compile Include="pg_maestro_inicio_g8.aspx.cs">
       <DependentUpon>pg_maestro_inicio_g8.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -534,6 +579,7 @@
     <Compile Include="ReporteCalificacionCatedratico_g8.aspx.designer.cs">
       <DependentUpon>ReporteCalificacionCatedratico_g8.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="RestriccionCatedratico.aspx.cs">
       <DependentUpon>RestriccionCatedratico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -541,6 +587,7 @@
     <Compile Include="RestriccionCatedratico.aspx.designer.cs">
       <DependentUpon>RestriccionCatedratico.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="REVContenido.aspx.cs">
       <DependentUpon>REVContenido.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -625,7 +672,11 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.0\build\SpecFlow.targets'))" />
+
+    <Error Condition="!Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.10.1\build\NUnit.props'))" />
+
     <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+
   </Target>
   <Import Project="..\packages\SpecFlow.2.4.0\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
